@@ -2,7 +2,6 @@ Template7.registerHelper('stringify', function (context){
     var str = JSON.stringify(context);
     return str.replace(/'/g, '&#39;');
 });
-// JavaScript Document
 
 //Check if player has source (localStorage)
 	var mediaStorage = window.localStorage;
@@ -141,9 +140,6 @@ function playerUpdate(){
 
 
 // Side Menu Handlers
-$$(document).on('click', '#map', function (e) {
-    myApp.alert('Show my favorites');
-});
 
 $$(document).on('click', '#about', function (e) {
     myApp.alert('Show About');
