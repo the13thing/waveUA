@@ -15,7 +15,8 @@
   <preference name="exit-on-suspend" value="false"/>
   <preference name="show-splash-screen-spinner" value="true"/>
   <preference name="auto-hide-splash-screen" value="true"/>
-  <preference name="SplashScreenDelay" value="3000" />
+  <preference name="SplashScreen" value="screen" />
+  <preference name="SplashScreenDelay" value="5000" />
   <preference name="SplashMaintainAspectRatio" value="false" />
   <preference name="SplashShowOnlyFirstTime" value="true" />
   <preference name="disable-cursor" value="false"/>
@@ -40,10 +41,10 @@
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
   <icon src="icon.png"/>
-  <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
-  <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
-  <icon src="www/res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi"/>
-  <icon src="www/res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
+  <icon src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="ldpi"/>
+  <icon src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="mdpi"/>
+  <icon src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="hdpi"/>
+  <icon src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="xhdpi"/>
   <icon src="www/res/icon/blackberry/icon-80.png" gap:platform="blackberry"/>
   <icon src="www/res/icon/blackberry/icon-80.png" gap:platform="blackberry" gap:state="hover"/>
   <icon src="www/res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57"/>
@@ -74,10 +75,10 @@
   <allow-intent href="geo:*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
-    <splash src="www/res/screen/android/drawable-hdpi/logo.png" density="land-hdpi"/>
-    <splash src="www/res/screen/android/drawable-xxhdpi/logo.png" density="land-xxhdpi"/>
-    <splash src="www/res/screen/android/drawable-mdpi/logo.png" density="land-mdpi"/>
-    <splash src="www/res/screen/android/drawable-xhdpi/logo.png" density="land-xhdpi"/>
+    <splash src="www/res/screen/android/screen-hdpi-portrait.png" density="land-hdpi"/>
+    <splash src="www/res/screen/android/screen-xxhdpi-portrait.png" density="land-xxhdpi"/>
+    <splash src="www/res/screen/android/screen-mdpi-portrait.png" density="land-mdpi"/>
+    <splash src="www/res/screen/android/screen-xhdpi-portrait.png" density="land-xhdpi"/>
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>

@@ -40,7 +40,7 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 
 // Handle the Cordova deviceready Event
 $$(document).on('deviceready', function() {
-    console.log("Device is ready!");
+    navigator.splashscreen.show();
 });
 
 // Handle Submit Button
