@@ -409,7 +409,7 @@
                 <a id="playerBtn" href="">
                     <i class="icon fa fa-play fa-2x" </i>
                 </a>
-                <form name="musicAdd" action="db/insertPlaylist.php" method="post">
+                <form name="musicAdd" onsubmit="popupform(this,'musicAdd')" action="db/insertPlaylist.php" method="post">
                     <input type="hidden" name="title" value="{{name}}">
                     <input type="hidden" name="artist" value="{{artists[0].name}}">
                     <input type="hidden" name="album" value="{{album.name}}">
@@ -424,11 +424,14 @@
             </div>
         </div>
     </script>
+    <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
     </script>
+
 
     <!-- Weinre Debugging Support - uncomment and replace ip address with yours below to debug -->
     <!-- see this guide for instructions http://docs.phonegap.com/references/developer-app/debugging/ -->

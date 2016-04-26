@@ -243,3 +243,20 @@ myApp.onPageInit('map', function (page) {
 
     }
 });
+//OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
+function popupform(myform, windowname)
+{
+    if (! window.focus)return true;
+    window.open('', windowname, 'height=200,width=400,scrollbars=yes');
+    myform.target=windowname;
+    return true;
+}
+
+//Angular Spotify Module
+angular
+    .module('waveUA', ['spotify'])
+    .config(function (SpotifyProvider) {
+        SpotifyProvider.setClientId('123456789123456789');
+        SpotifyProvider.setRedirectUri('http://example.com/callback.html');
+        SpotifyProvider.setScope('playlist-read-private');
+    })
