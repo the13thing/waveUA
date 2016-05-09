@@ -122,16 +122,16 @@
                                     <div class="item-media"><i class="icon fa fa-music"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title label">
-                                                <ul>
-                                                    <li>
-                                                            <select name="searchTerms" id="searchTerms">
-                                                                <option value="track" selected>Songs</option>
-                                                                <option value="artist">Artist</option>
-                                                                <option value="album">Album</option>
-                                                            </select>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <select name="searchTerms" id="searchTerms">
+                                                        <option value="track" selected>Songs</option>
+                                                        <option value="artist">Artist</option>
+                                                        <option value="album">Album</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <div class="item-input">
                                             <input id="term" type="text" placeholder="Search for..." value=""/>
                                         </div>
@@ -244,7 +244,7 @@
         </div>
 
         <!-- Search bar -->
-        <div class="page" data-page="list">
+        <div class="page" data-page="artist">
             <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title"
                   data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
                 <div class="searchbar-input">
@@ -265,7 +265,86 @@
                         {{#each this}}
                         <li class="swipeout">
                             <div class="swipeout-content">
-                                <a href='#' data-template='itemTemplate' data-context='{{stringify this}}'
+                                <a href='#' onclick='
+                                $$.ajax({
+     dataType: "json",
+                                url:"https://api.spotify.com/v1/artists/{{id}}/albums",
+                                success: function (resp) {
+                                mainView.router.load({
+                                template: Template7.templates.artistAlbumTemplate,
+                                context: resp.items
+                                });
+                                },
+                                error: function (xhr) {
+                                console.log("Error on ajax call " + xhr);
+                                }
+                                });'
+                                   class="item-content item-link">
+                                    <div class="item-media">
+                                        <img data-src="{{images.url}}" class="lazy">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">{{name}}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!--ARTIST ALBUM TEMPLATE-->
+    <script id="artistAlbumTemplate" type="text/template7">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+                <div class="center sliding">Results</div>
+                <div class="right">
+                    <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search bar -->
+        <div class="page" data-page="artistAlbum">
+            <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title"
+                  data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
+                <div class="searchbar-input">
+                    <input type="search" placeholder="Search">
+                    <a href="#" class="searchbar-clear"></a>
+                </div>
+                <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+            <div class="searchbar-overlay"></div>
+            <div class="page-content">
+                <!-- no result -->
+                <div class="content-block searchbar-not-found">
+                    Nothing found
+                </div>
+
+                <div id="artistAlbumList" class="list-block media-list list-block-search searchbar-found">
+                    <ul>
+                        {{#each this}}
+                        <li class="swipeout">
+                            <div class="swipeout-content">
+                                <a href='#' onclick='
+                                $$.ajax({
+     dataType: "json",
+                                url:"https://api.spotify.com/v1/albums/{{id}}/tracks",
+                                success: function (resp) {
+                                mainView.router.load({
+                                template: Template7.templates.albumSongsTemplate,
+                                context: resp.items
+                                });
+                                },
+                                error: function (xhr) {
+                                console.log("Error on ajax call " + xhr);
+                                }
+                                });'
                                    class="item-content item-link">
                                     <div class="item-media">
                                         <img data-src="" class="lazy">
@@ -274,6 +353,75 @@
                                         <div class="item-title-row">
                                             <div class="item-title">{{name}}</div>
                                         </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!--ARTIST ALBUM TEMPLATE-->
+    <script id="albumSongsTemplate" type="text/template7">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+                <div class="center sliding">Results</div>
+                <div class="right">
+                    <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search bar -->
+        <div class="page" data-page="artistAlbum">
+            <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title"
+                  data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
+                <div class="searchbar-input">
+                    <input type="search" placeholder="Search">
+                    <a href="#" class="searchbar-clear"></a>
+                </div>
+                <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+            <div class="searchbar-overlay"></div>
+            <div class="page-content">
+                <!-- no result -->
+                <div class="content-block searchbar-not-found">
+                    Nothing found
+                </div>
+
+                <div id="albumSongsList" class="list-block media-list list-block-search searchbar-found">
+                    <ul>
+                        {{#each this}}
+                        <li class="swipeout">
+                            <div class="swipeout-content">
+                                <a href='#' onclick='
+                                $$.ajax({
+     dataType: "json",
+                                url:"https://api.spotify.com/v1/tracks/{{id}}",
+                                success: function (resp) {
+                                mainView.router.load({
+                                template: Template7.templates.itemTemplate,
+                                context: resp
+                                });
+                                },
+                                error: function (xhr) {
+                                console.log("Error on ajax call " + xhr);
+                                }
+                                });'
+
+                                 class="item-content item-link">
+                                    <div class="item-media">
+                                        <img data-src="" class="lazy">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">{{name}}</div>
+                                        </div>
+
                                     </div>
                                 </a>
                             </div>
@@ -298,7 +446,7 @@
         </div>
 
         <!-- Search bar -->
-        <div class="page" data-page="list">
+        <div class="page" data-page="album">
             <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title"
                   data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
                 <div class="searchbar-input">
@@ -319,10 +467,23 @@
                         {{#each this}}
                         <li class="swipeout">
                             <div class="swipeout-content">
-                                <a href='#' data-template='itemTemplate' data-context='{{stringify this}}'
+                                <a href='#' onclick='
+                                 $$.ajax({
+     dataType: "json",
+                                url:"https://api.spotify.com/v1/albums/{{id}}/tracks",
+                                success: function (resp) {
+                                mainView.router.load({
+                                template: Template7.templates.albumSongsTemplate,
+                                context: resp.items
+                                });
+                                },
+                                error: function (xhr) {
+                                console.log("Error on ajax call " + xhr);
+                                }
+                                });'
                                    class="item-content item-link">
                                     <div class="item-media">
-                                        <img data-src="{{images[2].url}}" class="lazy">
+                                        <img data-src="" class="lazy">
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title-row">
@@ -339,6 +500,7 @@
             </div>
         </div>
     </script>
+
 
     <!-- Media Item Template -->
     <script id="itemTemplate" type="text/template7">
@@ -424,20 +586,20 @@
             </div>
         </div>
     </script>
-    </div>
-    <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
-    <script type="text/javascript" src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <!--<script type="text/javascript" src="js/spotifyAuth.js"></script>-->
-    <script type="text/javascript" src="js/my-app.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
-    </script>
+</div>
+<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+<script type="text/javascript" src="../node_modules/spotify-web-api-js/src/spotify-web-api.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
+</script>
 
 
-    <!-- Weinre Debugging Support - uncomment and replace ip address with yours below to debug -->
-    <!-- see this guide for instructions http://docs.phonegap.com/references/developer-app/debugging/ -->
-    <!--<script src="http://172.20.10.8:8080/target/target-script-min.js#anonymous"></script>-->
+<!-- Weinre Debugging Support - uncomment and replace ip address with yours below to debug -->
+<!-- see this guide for instructions http://docs.phonegap.com/references/developer-app/debugging/ -->
+<!--<script src="http://172.20.10.8:8080/target/target-script-min.js#anonymous"></script>-->
 </body>
 
 </html>

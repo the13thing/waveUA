@@ -4,11 +4,12 @@ Template7.registerHelper('stringify', function (context){
     return str.replace(/'/g, '&#39;');
 });
 
+
 //Check if player has source (localStorage)
 var mediaStorage = window.localStorage;
 var playerHtml = document.getElementById("player");
 var spotifyLink = document.getElementById("spotifyLink");
-var playerImage = document.getElementById("")
+var playerImage = document.getElementById("");
 //If player has no source do nothing
 if (mediaStorage.getItem("playerUrl")===null){
 }
@@ -140,7 +141,9 @@ myApp.onPageInit('list', function (page) {
         else myApp.alert("Share plugin not found");
     });
 });
-
+// Artist Item Page Handling
+myApp.onPageInit('artist', function (page) {
+});
 // Media Item Page Handling
 myApp.onPageInit('media', function (page) {
     var item = page.context;
@@ -191,7 +194,7 @@ myApp.onPageInit ('settings', function (page) {
     $(document).ready(function() {
         $.getJSON("http://localhost/waveua/www/db/json.php",function(result){
             $.each(result, function(i, field){
-                $("#dbDisplay").append(field.name + "<br/>");
+                $("#dbDisplay").append(field.album + "<br/>");
             });
         });
     });
@@ -247,7 +250,7 @@ myApp.onPageInit('map', function (page) {
 function popupform(myform, windowname)
 {
     if (! window.focus)return true;
-    window.open('', windowname, 'height=200,width=400,scrollbars=yes');
+    window.open('', windowname, 'height=200,width=400,scrollbars=no');
     myform.target=windowname;
     return true;
 }
@@ -260,3 +263,10 @@ angular
         SpotifyProvider.setRedirectUri('http://example.com/callback.html');
         SpotifyProvider.setScope('playlist-read-private');
     })
+/*
+ //  SPOTIFY WEB API JS WRAPPER
+ var spotifyApi = new SpotifyWebApi();
+ spotifygetArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function(err, data) {
+ if (err) console.error(err);
+ else console.log('Artist albums', data);
+ });*/
