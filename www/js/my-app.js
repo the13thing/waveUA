@@ -180,6 +180,14 @@ myApp.onPageInit('media', function (page) {
     $$(page.container).find('.favorite').on('click', function (e) {
         myApp.alert(item.name + ' added to favorites!');
     });
+    $$(page.container).find('.preview').on('click', function (e) {
+        mediaStorage.setItem("playerUrl",item.preview_url);
+        mediaStorage.setItem("playerExt",item.external_urls.spotify);
+        playerHtml.pause();
+        playerHtml.setAttribute("src",mediaStorage.getItem("playerUrl"));
+        playerHtml.play();
+        spotifyLink.setAttribute("href",mediaStorage.getItem("playerExt"));
+    });
 });
 
 
