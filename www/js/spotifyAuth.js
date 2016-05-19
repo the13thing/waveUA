@@ -1,8 +1,8 @@
 angular
-    .module('exampleApp', ['spotify'])
+    .module('waveUA', ['spotify'])
     .config(function (SpotifyProvider) {
         SpotifyProvider.setClientId('d1fa368a055b41bb95664fc3cb7a719e');
-        SpotifyProvider.setRedirectUri('http://localhost:8888/callback');
+        SpotifyProvider.setRedirectUri('http://localhost/waveua/www/callback.html');
         SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     })
     .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
@@ -12,11 +12,17 @@ angular
                 $scope.artists = data.artists.items;
             });
         };
-
+        $scope.showProfile = function () {
+            Spotify.getCurrentUser().then(function (data) {
+                console.log(data);
+                $("#profile_name").append(data.display_name);
+                $("#profile_country").append(data.country);
+                $("#profile_image").attr("data-src",data.images[0].url);
+            });
+        };
         $scope.login = function () {
             Spotify.login().then(function (data) {
                 console.log(data);
-                alert("You are now logged in");
             }, function () {
                 console.log('didn\'t log in');
             })

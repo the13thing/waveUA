@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="exampleApp">
+<html ng-app="waveUA">
 <head>
     <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
@@ -11,6 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>WaveUA</title>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
@@ -36,6 +37,14 @@
                     <div class="item-media"><i class="fa fa-search"></i></div>
                     <div class="item-inner">
                         <div class="item-title label"><a href="#index" class="back" data-force="true">Search</a></div>
+                    </div>
+                </div>
+            </li>
+            <li id="profile">
+                <div class="item-content">
+                    <div class="item-media"><i class="fa fa-user"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title label"><a href="profile.html" class="back" data-force="true" ng-click="showProfile()">Profile</a></div>
                     </div>
                 </div>
             </li>
@@ -588,11 +597,10 @@
 </div>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-<script type="text/javascript" src="../node_modules/spotify-web-api-js/src/spotify-web-api.js"></script>
-<script type="text/javascript" src="js/my-app.js"></script>
 <script src="../node_modules/angular/angular.min.js"></script>
 <script src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
 <script src="js/spotifyAuth.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
 </script>
 
