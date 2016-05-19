@@ -254,19 +254,3 @@ function popupform(myform, windowname)
     myform.target=windowname;
     return true;
 }
-
-//Angular Spotify Module
-angular
-    .module('waveUA', ['spotify'])
-    .config(function (SpotifyProvider) {
-        SpotifyProvider.setClientId('123456789123456789');
-        SpotifyProvider.setRedirectUri('http://example.com/callback.html');
-        SpotifyProvider.setScope('playlist-read-private');
-    })
-/*
- //  SPOTIFY WEB API JS WRAPPER
- var spotifyApi = new SpotifyWebApi();
- spotifygetArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function(err, data) {
- if (err) console.error(err);
- else console.log('Artist albums', data);
- });*/

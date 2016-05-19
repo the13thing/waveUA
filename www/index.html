@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="exampleApp">
 <head>
     <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
@@ -14,16 +14,13 @@
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
-
-
     <!-- Font-awesome icon library -->
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
 
 </head>
-<body class="layout-dark">
+<body class="layout-dark" ng-controller="MainController">
 <!-- Status bar overlay for iOS7 issue - see my-app.css for background color setting and config.xml -->
 <div class="statusbar-overlay"></div>
 
@@ -84,7 +81,9 @@
                         <i class="icon icon-bars"></i>
                     </a>
                 </div>
-                <div class="center sliding">WaveUA</div>
+                <div class="center sliding">
+                    <a href="" ng-click="login()">WaveUA</a>
+                </div>
             </div>
         </div>
 
@@ -159,7 +158,7 @@
                     <div class="content-block">
                         <div class="row">
                             <div class="col-100">
-                                <input id="btnSearch" type="button" value="Submit" class="button button-big button-fill color-green"/>
+                                <input id="btnSearch" type="button" value="Submit" class="button button-big button-fill color-green" ng-click="spotify.login()"/>
                             </div>
                         </div>
                     </div>
@@ -313,7 +312,7 @@
         <div class="page" data-page="artistAlbum">
             <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title"
                   data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
-                <div class="searchbar-input">
+                <div class="searchbar-input" ngController="spotifyCtrl as spotify">
                     <input type="search" placeholder="Search">
                     <a href="#" class="searchbar-clear"></a>
                 </div>
@@ -587,12 +586,13 @@
         </div>
     </script>
 </div>
-<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
-<script type="text/javascript" src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
 <script type="text/javascript" src="../node_modules/spotify-web-api-js/src/spotify-web-api.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
+<script src="js/spotifyAuth.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
 </script>
 
