@@ -41,7 +41,6 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 
 // Handle the Cordova deviceready Event
 $$(document).on('deviceready', function() {
-    navigator.splashscreen.show();
 });
 
 // Handle Submit Button
@@ -195,10 +194,16 @@ myApp.onPageInit('media', function (page) {
 $$(document).on('click', '#about', function (e) {
     myApp.alert('Show About');
 });
-//ON PAGE LOADINGS:
+$$(document).on('click', '#mapMenu', function(e){
+    mainView.router.load({pageName: 'map'});
+    initMap();
 
-// DATABASE
-myApp.onPageInit ('settings', function (page) {
+});
+$$(document).on('click', '#indexMenu', function(e){
+    mainView.router.load({pageName: 'index'});
+});
+$$(document).on('click', '#settingsMenu', function(e){
+    mainView.router.load({pageName: 'settings'});
     $(document).ready(function() {
         $.getJSON("http://localhost/waveua/www/db/json.php",function(result){
             $.each(result, function(i, field){
@@ -206,6 +211,17 @@ myApp.onPageInit ('settings', function (page) {
             });
         });
     });
+
+});
+$$(document).on('click', '#profileMenu', function(e){
+    mainView.router.load({pageName: 'profile'});
+
+});
+//ON PAGE LOADINGS:
+
+// DATABASE
+myApp.onPageInit ('settings', function (page) {
+
 });
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
@@ -219,7 +235,6 @@ myApp.onPageInit ('media', function (page) {
 });
 
 // MAP AND GEOLOCATION
-myApp.onPageInit('map', function (page) {
     initMap();
     function initMap() {
         var onSuccess = function(position) {
@@ -253,7 +268,6 @@ myApp.onPageInit('map', function (page) {
 
 
     }
-});
 //OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
 function popupform(myform, windowname)
 {

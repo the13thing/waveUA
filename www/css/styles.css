@@ -6,6 +6,18 @@
 
    https://github.com/apache/cordova-plugin-statusbar
 */
+#splashscreen {
+    background-image:linear-gradient(top, #491549 0%, #C44A4B 51%);
+    background-image:-webkit-linear-gradient(top, #491549 0%, #C44A4B 51%);
+    background-image:-ms-linear-gradient(top, #491549 0%, #C44A4B 51%);
+    background-image:-webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #491549),
+            color-stop(0.51, #C44A4B)
+    );
+}
 .statusbar-overlay {
     background: #000000;
 }

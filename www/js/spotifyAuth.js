@@ -14,15 +14,22 @@ angular
         };
         $scope.showProfile = function () {
             Spotify.getCurrentUser().then(function (data) {
-                console.log(data);
-                $("#profile_name").append(data.display_name);
-                $("#profile_country").append(data.country);
-                $("#profile_image").attr("data-src",data.images[0].url);
+
             });
         };
         $scope.login = function () {
             Spotify.login().then(function (data) {
                 console.log(data);
+                Spotify.getCurrentUser().then(function (data) {
+                    console.log(data);
+                    $("#profile_name").append(data.display_name);
+                    $("#profile_country").append(data.country);
+                    $("#profile_image").attr("src",data.images[0].url);
+                    $("#profileSide").attr("src",data.images[0].url);
+                    $("#profileName").append(data.display_name);
+                });
+                mainView.router.load({pageName: 'index'});
+
             }, function () {
                 console.log('didn\'t log in');
             })
