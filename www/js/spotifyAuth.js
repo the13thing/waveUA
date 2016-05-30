@@ -2,7 +2,7 @@ angular
     .module('waveUA', ['spotify'])
     .config(function (SpotifyProvider) {
         SpotifyProvider.setClientId('d1fa368a055b41bb95664fc3cb7a719e');
-        SpotifyProvider.setRedirectUri('http://localhost/waveua/www/callback.html');
+        SpotifyProvider.setRedirectUri('http://wave.web.ua.pt/www/callback.html');
         SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     })
     .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
@@ -18,21 +18,10 @@ angular
             });
         };
         $scope.login = function () {
-            Spotify.login().then(function (data) {
-                Spotify.getCurrentUser().then(function (data) {
-                    $("#profile_name").append(data.display_name);
-                    $("#profile_country").append(data.country);
-                    $("#profile_image").attr("src",data.images[0].url);
-                    $("#profileSide").attr("src",data.images[0].url);
-                    $("#profileName").append(data.display_name);
 
-                });
                 mainView.router.load({pageName: 'index'});
 
-            }, function () {
-                mainView.router.load({pageName: 'index'});
-                console.log('didn\'t log in');
-            })
+            
         };
         /*
          // Gets an album
