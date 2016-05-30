@@ -18,21 +18,8 @@ angular
             });
         };
         $scope.login = function () {
-            Spotify.login().then(function (data) {
-                Spotify.getCurrentUser().then(function (data) {
-                    $("#profile_name").append(data.display_name);
-                    $("#profile_country").append(data.country);
-                    $("#profile_image").attr("src",data.images[0].url);
-                    $("#profileSide").attr("src",data.images[0].url);
-                    $("#profileName").append(data.display_name);
+            mainView.router.load({pageName: 'index'});
 
-                });
-                mainView.router.load({pageName: 'index'});
-
-            }, function () {
-                mainView.router.load({pageName: 'index'});
-                console.log('didn\'t log in');
-            })
         };
 /*
         // Gets an album

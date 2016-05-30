@@ -1,6 +1,5 @@
 <?php
 include "db.php";
-$data=array();
 $query="SELECT * FROM musics";
 $result=mysqli_query($link,$query);
 $row=array();
