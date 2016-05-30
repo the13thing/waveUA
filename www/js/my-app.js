@@ -196,7 +196,6 @@ $$(document).on('click', '#about', function (e) {
 });
 $$(document).on('click', '#mapMenu', function(e){
     mainView.router.load({pageName: 'map'});
-    initMap();
 
 });
 $$(document).on('click', '#feedMenu', function(e){
@@ -238,53 +237,9 @@ myApp.onPageInit ('media', function (page) {
 });
 
 // MAP AND GEOLOCATION
-    initMap();
-    function initMap() {
-        var onSuccess = function(position) {
-            var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            var options = {
-                zoom: 15,
-                center: coords,
-                mapTypeControl: false,
-                navigationControlOptions: {
-                    style: google.maps.NavigationControlStyle.SMALL
-                }
-
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: coords,
-                map: map,
-                title: "You are here!"
-            });
-        };
-        var onError = function(error){var options = {
-            zoom: 15,
-            center: {lat: -34.397, lng: 150.644},
-            mapTypeControl: false,
-            navigationControlOptions: {
-                style: google.maps.NavigationControlStyle.SMALL
-            }
-
-        };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: {lat: -34.397, lng: 150.644},
-                map: map,
-                title: "You are here!"
-            });
-            window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
-        };
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
-            $$(document).on('deviceready', function() {
-                navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
-            });        }
-        else {
-            navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
-        }
 
 
-    }
+    
 //OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
 function popupform(myform, windowname)
 {
