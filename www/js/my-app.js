@@ -41,6 +41,7 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 
 // Handle the Cordova deviceready Event
 $$(document).on('deviceready', function() {
+    navigator.splashscreen.show();
 });
 
 // Handle Submit Button
@@ -194,37 +195,17 @@ myApp.onPageInit('media', function (page) {
 $$(document).on('click', '#about', function (e) {
     myApp.alert('Show About');
 });
-$$(document).on('click', '#mapMenu', function(e){
-    mainView.router.load({pageName: 'map'});
-    initMap();
+//ON PAGE LOADINGS:
 
-});
-$$(document).on('click', '#feedMenu', function(e){
-    mainView.router.load({pageName: 'feed'});
-});
-$$(document).on('click', '#indexMenu', function(e){
-    mainView.router.load({pageName: 'index'});
-});
-$$(document).on('click', '#settingsMenu', function(e){
-    mainView.router.load({pageName: 'settings'});
+// DATABASE
+myApp.onPageInit ('settings', function (page) {
     $(document).ready(function() {
-        $.getJSON("http://wave.web.ua.pt/www/db/json.php",function(result){
+        $.getJSON("http://localhost/waveua/www/db/json.php",function(result){
             $.each(result, function(i, field){
                 $("#dbDisplay").append(field.album + "<br/>");
             });
         });
     });
-
-});
-$$(document).on('click', '#profileMenu', function(e){
-    mainView.router.load({pageName: 'profile'});
-
-});
-//ON PAGE LOADINGS:
-
-// DATABASE
-myApp.onPageInit ('settings', function (page) {
-
 });
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
@@ -238,6 +219,7 @@ myApp.onPageInit ('media', function (page) {
 });
 
 // MAP AND GEOLOCATION
+myApp.onPageInit('map', function (page) {
     initMap();
     function initMap() {
         var onSuccess = function(position) {
@@ -258,21 +240,7 @@ myApp.onPageInit ('media', function (page) {
                 title: "You are here!"
             });
         };
-        var onError = function(error){var options = {
-            zoom: 15,
-            center: {lat: -34.397, lng: 150.644},
-            mapTypeControl: false,
-            navigationControlOptions: {
-                style: google.maps.NavigationControlStyle.SMALL
-            }
-
-        };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: {lat: -34.397, lng: 150.644},
-                map: map,
-                title: "You are here!"
-            });
+        var onError = function(error){
             window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
         };
         if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
@@ -280,11 +248,12 @@ myApp.onPageInit ('media', function (page) {
                 navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
             });        }
         else {
-            navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
+            navigator.geolocation.getCurrentPosition(onSuccess,onError);
         }
 
 
     }
+});
 //OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
 function popupform(myform, windowname)
 {
