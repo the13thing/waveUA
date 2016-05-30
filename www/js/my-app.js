@@ -41,6 +41,10 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 
 // Handle the Cordova deviceready Event
 $$(document).on('deviceready', function() {
+<<<<<<< HEAD
+=======
+    navigator.splashscreen.show();
+>>>>>>> 2e77bb76f2cfe24632930a9f6fd8bbdff2cda4a0
 });
 
 // Handle Submit Button
@@ -194,26 +198,31 @@ myApp.onPageInit('media', function (page) {
 $$(document).on('click', '#about', function (e) {
     myApp.alert('Show About');
 });
+<<<<<<< HEAD
 $$(document).on('click', '#mapMenu', function(e){
     mainView.router.load({pageName: 'map'});
     initMap();
 
-});
-$$(document).on('click', '#feedMenu', function(e){
-    mainView.router.load({pageName: 'feed'});
 });
 $$(document).on('click', '#indexMenu', function(e){
     mainView.router.load({pageName: 'index'});
 });
 $$(document).on('click', '#settingsMenu', function(e){
     mainView.router.load({pageName: 'settings'});
+=======
+//ON PAGE LOADINGS:
+
+// DATABASE
+myApp.onPageInit ('settings', function (page) {
+>>>>>>> 2e77bb76f2cfe24632930a9f6fd8bbdff2cda4a0
     $(document).ready(function() {
-        $.getJSON("http://wave.web.ua.pt/www/db/json.php",function(result){
+        $.getJSON("http://localhost/waveua/www/db/json.php",function(result){
             $.each(result, function(i, field){
                 $("#dbDisplay").append(field.album + "<br/>");
             });
         });
     });
+<<<<<<< HEAD
 
 });
 $$(document).on('click', '#profileMenu', function(e){
@@ -225,6 +234,8 @@ $$(document).on('click', '#profileMenu', function(e){
 // DATABASE
 myApp.onPageInit ('settings', function (page) {
 
+=======
+>>>>>>> 2e77bb76f2cfe24632930a9f6fd8bbdff2cda4a0
 });
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
@@ -238,6 +249,10 @@ myApp.onPageInit ('media', function (page) {
 });
 
 // MAP AND GEOLOCATION
+<<<<<<< HEAD
+=======
+myApp.onPageInit('map', function (page) {
+>>>>>>> 2e77bb76f2cfe24632930a9f6fd8bbdff2cda4a0
     initMap();
     function initMap() {
         var onSuccess = function(position) {
@@ -258,21 +273,7 @@ myApp.onPageInit ('media', function (page) {
                 title: "You are here!"
             });
         };
-        var onError = function(error){var options = {
-            zoom: 15,
-            center: {lat: -34.397, lng: 150.644},
-            mapTypeControl: false,
-            navigationControlOptions: {
-                style: google.maps.NavigationControlStyle.SMALL
-            }
-
-        };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: {lat: -34.397, lng: 150.644},
-                map: map,
-                title: "You are here!"
-            });
+        var onError = function(error){
             window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
         };
         if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
@@ -280,11 +281,15 @@ myApp.onPageInit ('media', function (page) {
                 navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
             });        }
         else {
-            navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
+            navigator.geolocation.getCurrentPosition(onSuccess,onError);
         }
 
 
     }
+<<<<<<< HEAD
+=======
+});
+>>>>>>> 2e77bb76f2cfe24632930a9f6fd8bbdff2cda4a0
 //OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
 function popupform(myform, windowname)
 {

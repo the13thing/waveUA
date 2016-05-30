@@ -6,6 +6,7 @@
 
    https://github.com/apache/cordova-plugin-statusbar
 */
+<<<<<<< HEAD
 #splashscreen {
     background-image:linear-gradient(top, #491549 0%, #C44A4B 51%);
     background-image:-webkit-linear-gradient(top, #491549 0%, #C44A4B 51%);
@@ -18,6 +19,8 @@
             color-stop(0.51, #C44A4B)
     );
 }
+=======
+>>>>>>> 2e77bb76f2cfe24632930a9f6fd8bbdff2cda4a0
 .statusbar-overlay {
     background: #000000;
 }
@@ -42,7 +45,7 @@ i.icon.icon-spotify {
 }
 /* Format content headers */
 .content-block-title {
-    margin: 18px 10px 10px;
+    margin: 18px 15px 10px;
 }
 /* Format the long track titles */
 .list-block .item-title {

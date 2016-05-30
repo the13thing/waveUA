@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/WaveUA.iml" filepath="$PROJECT_DIR$/.idea/WaveUA.iml" />
-      <module fileurl="file://Z:/.idea/WaveUA.iml" filepath="Z:/.idea/WaveUA.iml" />
     </modules>
   </component>
 </project>
