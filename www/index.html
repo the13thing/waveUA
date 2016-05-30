@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src *;
+                  style-src * 'self' 'unsafe-inline' 'unsafe-eval';
+                  script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
     <title>WaveUA</title>
     <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
 
@@ -700,6 +704,7 @@
 <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
 <script src="../node_modules/angular/angular.min.js"></script>
 <script src="../node_modules/angular-spotify/src/angular-spotify.js"></script>
+<script src="js/spotifyAuth.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
 </script>
