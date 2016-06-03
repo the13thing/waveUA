@@ -510,33 +510,32 @@
             };
 
             var authCompleted = false;
-            
-            $window.addEventListener('loadstart', function(e) {
-              var url = e.originalEvent.url;
-              var code = /\?code=(.+)$/.exec(url);
-              var error = /\?error=(.+)$/.exec(url);
+            var authWindow = openDialog(
+              'https://accounts.spotify.com/authorize?' + this.toQueryString(params),
+              'Spotify',
+              'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=' + w + ',height=' + h + ',top=' + top + ',left=' + left,
+              function () {
+                if (!authCompleted) {
+                  deferred.reject();
+                }
+              }
+            );
 
-              if (code || error) {
-                authWindow.close();
+            function storageChanged (e) {
+              if (e.key === 'spotify-token') {
+                if (authWindow) { authWindow.close(); }
                 authCompleted = true;
 
                 that.setAuthToken(e.newValue);
+                $window.removeEventListener('storage', storageChanged, false);
+
                 deferred.resolve(e.newValue);
               }
-            });
-            $window.addEventListener('loaderror', function(e) {
-              var url = e.originalEvent.url;
-              var code = /\?code=(.+)$/.exec(url);
-              var error = /\?error=(.+)$/.exec(url);
+            }
+            $window.addEventListener('loadstart', storageChanged, false);
+            $window.addEventListener('loaderror', storageChanged, false);
+            $window.addEventListener('loadstop', storageChanged, false);
 
-              if (code || error) {
-                authWindow.close();
-                authCompleted = true;
-
-                that.setAuthToken(e.newValue);
-                deferred.resolve(e.newValue);
-              }
-            });
 
             return deferred.promise;
           }
