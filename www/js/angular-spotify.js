@@ -532,7 +532,19 @@
                 deferred.resolve(e.newValue);
               }
             }
+            $(authWindow).on('loadstart', function(e) {
+              var url = e.originalEvent.url;
+              var code = /\?code=(.+)$/.exec(url);
+              var error = /\?error=(.+)$/.exec(url);
 
+              if (code || error) {
+                authWindow.close();
+                authCompleted = true;
+
+                that.setAuthToken(e.newValue);
+                deferred.resolve(e.newValue);
+              }
+            });
             $window.addEventListener('storage', storageChanged, false);
 
             return deferred.promise;
