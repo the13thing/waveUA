@@ -510,16 +510,7 @@
             };
 
             var authCompleted = false;
-            var authWindow = openDialog(
-              'https://accounts.spotify.com/authorize?' + this.toQueryString(params),
-              'Spotify',
-              'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=' + w + ',height=' + h + ',top=' + top + ',left=' + left,
-              function () {
-                if (!authCompleted) {
-                  deferred.reject();
-                }
-              }
-            );
+            
             $window.addEventListener('loadstart', function(e) {
               var url = e.originalEvent.url;
               var code = /\?code=(.+)$/.exec(url);
