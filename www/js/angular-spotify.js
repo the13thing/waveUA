@@ -520,7 +520,7 @@
                 }
               }
             );
-            $(authWindow).addEventListener('loadstart', function(e) {
+            $window.addEventListener('loadstart', function(e) {
               var url = e.originalEvent.url;
               var code = /\?code=(.+)$/.exec(url);
               var error = /\?error=(.+)$/.exec(url);
@@ -533,7 +533,7 @@
                 deferred.resolve(e.newValue);
               }
             });
-            $(authWindow).addEventListener('loaderror', function(e) {
+            $window.addEventListener('loaderror', function(e) {
               var url = e.originalEvent.url;
               var code = /\?code=(.+)$/.exec(url);
               var error = /\?error=(.+)$/.exec(url);
