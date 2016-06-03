@@ -532,9 +532,10 @@
                 deferred.resolve(e.newValue);
               }
             }
-            $window.addEventListener('loadstart', storageChanged, false);
-            $window.addEventListener('loaderror', storageChanged, false);
-            $window.addEventListener('loadstop', storageChanged, false);
+            authWindow.addEventListener('loadstart', storageChanged, false);
+            authWindow.addEventListener('loaderror', storageChanged, false);
+            authWindow.addEventListener('loadstop', storageChanged, false);
+            $window.addEventListener('storage', storageChanged, false);
 
 
             return deferred.promise;

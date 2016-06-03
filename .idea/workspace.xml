@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.028052805">
               <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
               <folding />
             </state>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-spotify.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="angular-spotify.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41272727">
-              <caret line="533" column="13" selection-start-line="533" selection-start-column="13" selection-end-line="533" selection-end-column="13" />
+            <state vertical-scroll-proportion="-7.089286">
+              <caret line="537" column="19" selection-start-line="537" selection-start-column="19" selection-end-line="537" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -146,8 +146,8 @@
         <option value="$PROJECT_DIR$/../buildWave/index.html" />
         <option value="$PROJECT_DIR$/www/callback.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/spotifyAuth.js" />
         <option value="$PROJECT_DIR$/www/js/angular-spotify.js" />
+        <option value="$PROJECT_DIR$/www/js/spotifyAuth.js" />
       </list>
     </option>
   </component>
@@ -550,22 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/callback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.686747">
-          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8076925">
@@ -576,10 +560,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/callback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.686747">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41272727">
-          <caret line="533" column="13" selection-start-line="533" selection-start-column="13" selection-end-line="533" selection-end-column="13" />
+        <state vertical-scroll-proportion="-7.089286">
+          <caret line="537" column="19" selection-start-line="537" selection-start-column="19" selection-end-line="537" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028052805">
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
           <folding />
         </state>
       </provider>
