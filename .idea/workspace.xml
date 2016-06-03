@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86b9fdae-dca5-4b05-b695-f0dc89326e9c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/angular-spotify.js" afterPath="$PROJECT_DIR$/www/js/angular-spotify.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/spotifyAuth.js" afterPath="$PROJECT_DIR$/www/js/spotifyAuth.js" />
     </list>
     <ignored path="WaveUA.iws" />
@@ -24,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.028052805">
-              <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-spotify.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="angular-spotify.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.571429">
-              <caret line="543" column="46" selection-start-line="543" selection-start-column="46" selection-end-line="543" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.47454545">
+              <caret line="535" column="39" selection-start-line="535" selection-start-column="39" selection-end-line="535" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -146,8 +147,8 @@
         <option value="$PROJECT_DIR$/../buildWave/index.html" />
         <option value="$PROJECT_DIR$/www/callback.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/angular-spotify.js" />
         <option value="$PROJECT_DIR$/www/js/spotifyAuth.js" />
+        <option value="$PROJECT_DIR$/www/js/angular-spotify.js" />
       </list>
     </option>
   </component>
@@ -568,18 +569,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
+    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.571429">
-          <caret line="543" column="46" selection-start-line="543" selection-start-column="46" selection-end-line="543" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
+    <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028052805">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.47454545">
+          <caret line="535" column="39" selection-start-line="535" selection-start-column="39" selection-end-line="535" selection-end-column="39" />
           <folding />
         </state>
       </provider>

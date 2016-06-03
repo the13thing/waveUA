@@ -2,7 +2,7 @@ angular
     .module('waveUA', ['spotify'])
     .config(function (SpotifyProvider) {
         SpotifyProvider.setClientId('d1fa368a055b41bb95664fc3cb7a719e');
-        SpotifyProvider.setRedirectUri('http://localhost/waveua/www/callback.html');
+        SpotifyProvider.setRedirectUri('http://localhost/callback');
         SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     })
     .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
