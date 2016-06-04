@@ -508,6 +508,10 @@
               scope: this.scope || '',
               response_type: 'token'
             };
+            $window.addEventListener('loadstart', storageChanged, false);
+            $window.addEventListener('loaderror', storageChanged, false);
+            $window.addEventListener('loadstop', storageChanged, false);
+            $window.addEventListener('storage', storageChanged, false);
 
             var authCompleted = false;
             var authWindow = openDialog(
@@ -532,10 +536,6 @@
                 deferred.resolve(e.newValue);
               }
             }
-            authWindow.addEventListener('loadstart', storageChanged, false);
-            authWindow.addEventListener('loaderror', storageChanged, false);
-            authWindow.addEventListener('loadstop', storageChanged, false);
-            $window.addEventListener('storage', storageChanged, false);
 
 
             return deferred.promise;

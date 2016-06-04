@@ -124,9 +124,12 @@
         <!-- Bottom Toolbar on every view unless no-toolbar class specified (see item template)-->
         <div class="toolbar toolbar-hidden">
             <div class="toolbar-inner" style="height: 50px; background-image: url('img/player_back.png')";>
-                <div id="previewAudio">
-                    <img src="">
+                <div id="previewAudio" class="content-block">
+                    <img id="imgPreview" src="" style="width: 10%">
                     <audio id="player" controls preload="" src=""></audio>
+                    <a href="#" class="ac-1"><i class="fa fa-sort-up"></i></a>
+
+                        <i id="expandPlayer" class="fa fa-arrows-alt"></i>
                 </div>
                 <div id="spotifyExternal">
                     <a href="" id="spotifyLink" class="link external">
@@ -257,6 +260,37 @@
 
                 </div>
             </div>
+            <!--EXPAND PLAYER PAGE-->
+            <div data-page="expandPlayer" class="page">
+                <!-- Scrollable page content-->
+                <div class="page-content">
+                    <a href="" class="back"><i class="fa fa-arrow-left"></i></a>
+                    <div class="content-block-title">Playing now</div>
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><img id="trackImage" src="" class="lazy"/></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Country: </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
             <!--SPLASHSCREEN PAGE-->
             <div id="splashscreen" class="page no-navbar no-toolbar" data-page="splashscreen">
                 <!-- page-content has additional login-screen content -->
@@ -274,6 +308,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>

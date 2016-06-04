@@ -26,6 +26,7 @@ angular
                     $("#profileSide").attr("src",data.images[0].url);
                     $("#profileName").append(data.display_name);
                 });
+
                 mainView.router.load({pageName: 'index'});
 
             }, function () {

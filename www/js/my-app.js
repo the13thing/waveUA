@@ -16,6 +16,8 @@ if (mediaStorage.getItem("playerUrl")===null){
 else {
     playerHtml.setAttribute("src",mediaStorage.getItem("playerUrl"));
     spotifyLink.setAttribute("href",mediaStorage.getItem("playerExt"));
+    document.getElementById("imgPreview").setAttribute("src",mediaStorage.getItem("playerImg"));
+
 }
 
 // Initialize your app
@@ -153,14 +155,19 @@ myApp.onPageInit('media', function (page) {
 //Changes the player info (only called on user click (play))
     function playerUpdate(){
         mediaStorage.setItem("playerUrl",item.preview_url);
+        mediaStorage.setItem("playerTrack",item.name);
+        mediaStorage.setItem("playerArtist",item.artists[0].name);
         mediaStorage.setItem("playerExt",item.external_urls.spotify);
+        mediaStorage.setItem("playerImg",item.album.images[2].url);
     }
     //Updates the player info (only called on "play" inside a search)
     function playerChange (){
         playerHtml.pause();
         playerHtml.setAttribute("src",mediaStorage.getItem("playerUrl"));
-        playerHtml.play();
         spotifyLink.setAttribute("href",mediaStorage.getItem("playerExt"));
+        document.getElementById("imgPreview").setAttribute("src",mediaStorage.getItem("playerImg"));
+
+        playerHtml.play();
     }
 
     $$(page.container).find('.share').on('click', function (e) {
@@ -182,10 +189,7 @@ myApp.onPageInit('media', function (page) {
     $$(page.container).find('.preview').on('click', function (e) {
         mediaStorage.setItem("playerUrl",item.preview_url);
         mediaStorage.setItem("playerExt",item.external_urls.spotify);
-        playerHtml.pause();
-        playerHtml.setAttribute("src",mediaStorage.getItem("playerUrl"));
-        playerHtml.play();
-        spotifyLink.setAttribute("href",mediaStorage.getItem("playerExt"));
+        playerChange();
     });
 });
 
@@ -219,6 +223,31 @@ $$(document).on('click', '#settingsMenu', function(e){
 $$(document).on('click', '#profileMenu', function(e){
     mainView.router.load({pageName: 'profile'});
 
+});
+//ON PLAYER BUTTONS
+$$(document).on('click', '#expandPlayer', function(e){
+    document.getElementById("trackImage").setAttribute("src",mediaStorage.getItem("playerImg"));
+    mainView.router.load({pageName: 'expandPlayer'});
+});
+//PLAYER ACTION SHEET
+$$('.ac-1').on('click', function () {
+    var buttons = [
+        {
+            text: 'Add to playlist',
+            bold: true,
+            onClick: function (){
+                
+            }
+        },
+        {
+            text: 'Share'
+        },
+        {
+            text: 'Cancel',
+            color: 'red'
+        }
+    ];
+    myApp.actions(buttons);
 });
 //ON PAGE LOADINGS:
 
