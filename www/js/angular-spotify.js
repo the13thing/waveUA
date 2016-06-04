@@ -512,7 +512,9 @@
             var authCompleted = false;
             var authUrl=
               'https://accounts.spotify.com/authorize?' + this.toQueryString(params);
-            var authWindow = window.open(authUrl, '_blank', 'location=no,toolbar=no');
+            var target = "_blank";
+            var options = "location=yes,hidden=yes";
+            var inAppBrowserRef = cordova.InAppBrowser.open(authUrl, target, options);
 
 
             function storageChanged (e) {
@@ -526,14 +528,16 @@
                 deferred.resolve(e.newValue);
               }
             }
-            $(authWindow).on('loadstart'), function(e){
-              window.alert("loadstart");
-            };
-            $(authWindow).on('loaderror'), function(e){
-              window.alert("loaderror");
-            };
             $window.addEventListener('storage', storageChanged, false);
-
+            $window.addEventListener('loadstart', function (){
+              window.alert("loadstart");
+            });
+            $window.addEventListener('loaderror', function (){
+              window.alert("loaderror");
+            });
+            $window.addEventListener('loadstop', function (){
+              window.alert("loadstop");
+            });
 
             return deferred.promise;
           }
