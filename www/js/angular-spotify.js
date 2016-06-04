@@ -522,6 +522,7 @@
             );
 
             function storageChanged (e) {
+              if (e.key === 'spotify-token') {
                 if (authWindow) { authWindow.close(); }
                 authCompleted = true;
 
@@ -529,10 +530,14 @@
                 $window.removeEventListener('storage', storageChanged, false);
 
                 deferred.resolve(e.newValue);
-
+              }
             }
-            $window.addEventListener('loadstart', storageChanged, false);
-            $window.addEventListener('loaderror', storageChanged, false);
+            $(authWindow).on('loadstart'), function(e){
+              window.alert("loadstart");
+            };
+            $(authWindow).on('loaderror'), function(e){
+              window.alert("loaderror");
+            };
             $window.addEventListener('storage', storageChanged, false);
 
 
