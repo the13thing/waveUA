@@ -514,7 +514,7 @@
             $window.addEventListener('storage', storageChanged, false);
 
             var authCompleted = false;
-            var authWindow = openDialog(
+            var authWindow = cordova.InAppBrowser.open(
               'https://accounts.spotify.com/authorize?' + this.toQueryString(params),
               'Spotify',
               'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=' + w + ',height=' + h + ',top=' + top + ',left=' + left,
