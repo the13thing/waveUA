@@ -510,12 +510,16 @@
             };
 
             var authCompleted = false;
-            var authUrl=
-              'https://accounts.spotify.com/authorize?' + this.toQueryString(params);
-            var target = "_blank";
-            var options = "location=yes,hidden=yes";
-            var inAppBrowserRef = cordova.InAppBrowser.open(authUrl, target, options);
-
+            var authWindow = openDialog(
+              'https://accounts.spotify.com/authorize?' + this.toQueryString(params),
+              'Spotify',
+              'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=' + w + ',height=' + h + ',top=' + top + ',left=' + left,
+              function () {
+                if (!authCompleted) {
+                  deferred.reject();
+                }
+              }
+            );
 
             function storageChanged (e) {
               if (e.key === 'spotify-token') {
@@ -528,16 +532,11 @@
                 deferred.resolve(e.newValue);
               }
             }
+            authWindow.addEventListener('loadstart', storageChanged, false);
+            authWindow.addEventListener('loaderror', storageChanged, false);
+            authWindow.addEventListener('loadstop', storageChanged, false);
             $window.addEventListener('storage', storageChanged, false);
-            $window.addEventListener('loadstart', function (){
-              window.alert("loadstart");
-            });
-            $window.addEventListener('loaderror', function (){
-              window.alert("loaderror");
-            });
-            $window.addEventListener('loadstop', function (){
-              window.alert("loadstop");
-            });
+
 
             return deferred.promise;
           }
