@@ -508,13 +508,9 @@
               scope: this.scope || '',
               response_type: 'token'
             };
-            $window.addEventListener('loadstart', storageChanged, false);
-            $window.addEventListener('loaderror', storageChanged, false);
-            $window.addEventListener('loadstop', storageChanged, false);
-            $window.addEventListener('storage', storageChanged, false);
 
             var authCompleted = false;
-            var authWindow = cordova.InAppBrowser.open(
+            var authWindow = openDialog(
               'https://accounts.spotify.com/authorize?' + this.toQueryString(params),
               'Spotify',
               'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=' + w + ',height=' + h + ',top=' + top + ',left=' + left,
@@ -526,7 +522,6 @@
             );
 
             function storageChanged (e) {
-              if (e.key === 'spotify-token') {
                 if (authWindow) { authWindow.close(); }
                 authCompleted = true;
 
@@ -534,8 +529,11 @@
                 $window.removeEventListener('storage', storageChanged, false);
 
                 deferred.resolve(e.newValue);
-              }
+
             }
+            $window.addEventListener('loadstart', storageChanged, false);
+            $window.addEventListener('loaderror', storageChanged, false);
+            $window.addEventListener('storage', storageChanged, false);
 
 
             return deferred.promise;
