@@ -532,9 +532,14 @@
                 deferred.resolve(e.newValue);
               }
             }
-            authWindow.addEventListener('loadstart', storageChanged, false);
-            authWindow.addEventListener('loaderror', storageChanged, false);
-            authWindow.addEventListener('loadstop', storageChanged, false);
+
+            authWindow.addEventListener('loaderror', function (e) {
+              var token = e.url.split('&')[0].split('=')[1];
+              localStorage.setItem('spotify-token', token);
+              that.setAuthToken(token);
+              deferred.resolve(token);
+
+            });
             $window.addEventListener('storage', storageChanged, false);
 
 
