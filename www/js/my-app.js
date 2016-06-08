@@ -287,6 +287,11 @@ myApp.onPageInit ('feed', function (page) {
         });
     });
 });
+myApp.onPageInit ('splashscreen', function (page) {
+    if (mediaStorage.getItem("login") == true) {
+        mainView.router.load({pageName: 'map'});
+    }
+}
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
     $(document).ready(function() {
