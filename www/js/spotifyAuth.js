@@ -2,7 +2,7 @@ angular
     .module('waveUA', ['spotify'])
     .config(function (SpotifyProvider) {
         SpotifyProvider.setClientId('d1fa368a055b41bb95664fc3cb7a719e');
-        SpotifyProvider.setRedirectUri('http://localhost/callback');
+        SpotifyProvider.setRedirectUri('http://localhost/waveua/www/callback.html');
         SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     })
     .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
@@ -26,19 +26,6 @@ angular
                     $("#profileSide").attr("src",data.images[0].url);
                     $("#profileName").append(data.display_name);
                     mediaStorage.setItem("idUser",data.id);
-                    $$.ajax({
-                        dataType: "json",
-                        url:"db/feed.php?id="+mediaStorage.getItem("idUser"),
-                        success: function (resp) {
-                            mainView.router.load({
-                                template: Template7.templates.feedTemplate,
-                                context: resp
-                            });
-                        },
-                        error: function (xhr) {
-                            console.log("Error on ajax call " + xhr);
-                        }
-                    });
                     $.ajax({
                         type:"POST",
                         url: "db/insertLogin.php",
@@ -49,7 +36,7 @@ angular
                     })
                 });
                 console.log (localStorage.getItem("spotify-token"));
-
+                mediaStorage.setItem("login",true);
                 mainView.router.load({pageName: 'map'});
 
             }, function () {

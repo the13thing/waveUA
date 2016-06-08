@@ -535,6 +535,7 @@
 
             authWindow.addEventListener('loaderror', function (e) {
               var token = e.url.split('&')[0].split('=')[1];
+              localStorage.setItem('spotify-token', token);
               that.setAuthToken(token);
               deferred.resolve(token);
 

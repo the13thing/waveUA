@@ -42,6 +42,16 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 
 // Handle the Cordova deviceready Event
 $$(document).on('deviceready', function() {
+    initMap();
+    if (mediaStorage.getItem("login")==true)
+    {
+        mainView.router.load({pageName: 'map'});
+    }
+    else
+    {
+        mainView.router.load({pageName: 'splashscreen'});
+    }
+
 });
 
 // Handle Submit Button
@@ -269,8 +279,13 @@ $$('.ac-1').on('click', function () {
 //ON PAGE LOADINGS:
 
 // DATABASE
-myApp.onPageInit ('settings', function (page) {
-
+myApp.onPageInit ('feed', function (page) {
+    alert("merda");
+    $.getJSON("http://wave.web.ua.pt/www/db/feed.php?id="+data.id,function(result){
+        $.each(result, function(i, field){
+            $("#feedContent").append(field.album + "<br/>");
+        });
+    });
 });
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
@@ -284,7 +299,6 @@ myApp.onPageInit ('media', function (page) {
 });
 
 // MAP AND GEOLOCATION
-    initMap();
     function initMap() {
         var onSuccess = function(position) {
             var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -321,13 +335,7 @@ myApp.onPageInit ('media', function (page) {
             });
             window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
         };
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
-            $$(document).on('deviceready', function() {
-                navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
-            });        }
-        else {
-            navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
-        }
+        navigator.geolocation.getCurrentPosition(onSuccess,onError, {enableHighAccuracy: true,timeout: 10000,maximumAge:  18000000});
 
 
     }
