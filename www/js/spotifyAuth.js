@@ -2,7 +2,7 @@ angular
     .module('waveUA', ['spotify'])
     .config(function (SpotifyProvider) {
         SpotifyProvider.setClientId('d1fa368a055b41bb95664fc3cb7a719e');
-        SpotifyProvider.setRedirectUri('http://localhost/waveua/www/callback.html');
+        SpotifyProvider.setRedirectUri('http://localhost/callback');
         SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     })
     .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
@@ -29,14 +29,16 @@ angular
                     $.ajax({
                         type:"POST",
                         url: "db/insertLogin.php",
-                        data: "idUser=" + data.id + "&nameUser=" + data.display_name,
+                        data: "idUser=" + data.id + "&nameUser=" + data.display_name + "&imgUser=" + data.images[0].url,
                         success: function(){
                             //do stuff after the AJAX calls successfully completes
                         }
-                    })
+                    });
+                    mediaStorage.setItem("idUser",data.id);
+
                 });
                 console.log (localStorage.getItem("spotify-token"));
-                mediaStorage.setItem("login",true);
+                initMap();
                 mainView.router.load({pageName: 'map'});
 
             }, function () {

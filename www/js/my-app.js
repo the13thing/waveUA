@@ -9,6 +9,7 @@ var mediaStorage = window.localStorage;
 var playerHtml = document.getElementById("player");
 var spotifyLink = document.getElementById("spotifyLink");
 var playerImage = document.getElementById("");
+var map;
 //If player has no source do nothing
 if (mediaStorage.getItem("playerUrl")===null){
 }
@@ -41,18 +42,20 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 });
 
 // Handle the Cordova deviceready Event
+// MAP AND GEOLOCATION
 $$(document).on('deviceready', function() {
-    initMap();
-    if (mediaStorage.getItem("login")==true)
-    {
-        mainView.router.load({pageName: 'map'});
-    }
-    else
-    {
-        mainView.router.load({pageName: 'splashscreen'});
-    }
+    var div = document.getElementById("map-canvas");
 
-});
+    // Initialize the map view
+    map = plugin.google.maps.Map.getMap(div);
+
+    // Wait until the map is ready status.
+    map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+}, false);
+
+function onMapReady() {
+}
+
 
 // Handle Submit Button
 // - This function calls the Spotify Web API with the designated search options then loads the list
@@ -211,11 +214,31 @@ $$(document).on('click', '#about', function (e) {
 });
 $$(document).on('click', '#mapMenu', function(e){
     mainView.router.load({pageName: 'map'});
-    initMap();
-
 });
 $$(document).on('click', '#feedMenu', function(e){
+    $("#feedLi").empty();
+    $.getJSON("http://localhost/waveua/www/db/feed.php?idUser="+mediaStorage.getItem("idUser"),function(result){
+        $.each(result, function(i, field){
+            $("#feedLi").append("<li class='swipeout'>"+
+                "<div class='swipeout-content'>"+
+                "<div class='item-media'>"+
+                "<img src='"+field.foto+"' class='lazy'>"+
+                "</div>"+
+                "<div class='item-inner'>"+
+                "<div class='item-title-row'>"+
+                "<div class='item-title'>"+field.nameMusics+"</div>"+
+                "</div>"+
+                "<div class='item-subtitle'>"+field.artist+"</div>"+
+                "<div class='item-text'>"+field.nameUser+"</div>"+
+                "<div class='item-text'>"+field.dateUsers+"</div>"+
+                "</div>"+
+                "</div>"+
+                "</li>");
+        });
+    });
     mainView.router.load({pageName: 'feed'});
+
+
 });
 $$(document).on('click', '#indexMenu', function(e){
     mainView.router.load({pageName: 'index'});
@@ -279,71 +302,17 @@ $$('.ac-1').on('click', function () {
 //ON PAGE LOADINGS:
 
 // DATABASE
-myApp.onPageInit ('feed', function (page) {
-    alert("merda");
-    $.getJSON("http://wave.web.ua.pt/www/db/feed.php?id="+data.id,function(result){
-        $.each(result, function(i, field){
-            $("#feedContent").append(field.album + "<br/>");
-        });
-    });
-});
-myApp.onPageInit ('splashscreen', function (page) {
-    if (mediaStorage.getItem("login") == true) {
-        mainView.router.load({pageName: 'map'});
-    }
-});
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
     $(document).ready(function() {
         $.getJSON("http://localhost/waveua/www/db/json.php",function(result){
             $.each(result, function(i, field){
-                $("#playlist").append("<option value= ''>"+field.name+"</option>");
+                $("#playlist").append("<option value= ''>"+field.nameMusics+"</option>");
             });
         });
     });
 });
 
-// MAP AND GEOLOCATION
-    function initMap() {
-        var onSuccess = function(position) {
-            var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            var options = {
-                zoom: 15,
-                center: coords,
-                mapTypeControl: false,
-                navigationControlOptions: {
-                    style: google.maps.NavigationControlStyle.SMALL
-                }
-
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: coords,
-                map: map,
-                title: "You are here!"
-            });
-        };
-        var onError = function(error){var options = {
-            zoom: 15,
-            center: {lat: -34.397, lng: 150.644},
-            mapTypeControl: false,
-            navigationControlOptions: {
-                style: google.maps.NavigationControlStyle.SMALL
-            }
-
-        };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: {lat: -34.397, lng: 150.644},
-                map: map,
-                title: "You are here!"
-            });
-            window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
-        };
-        navigator.geolocation.getCurrentPosition(onSuccess,onError, {enableHighAccuracy: true,timeout: 10000,maximumAge:  18000000});
-
-
-    }
 //OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
 function popupform(myform, windowname)
 {

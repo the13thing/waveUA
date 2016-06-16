@@ -245,21 +245,6 @@
 
                 </div>
             </div>
-            <!--FEED PAGE-->
-            <div data-page="feed" class="page">
-                <!-- Scrollable page content-->
-                <div class="page-content">
-                    <div class="content-block-title">Feed</div>
-                    <div class="list-block">
-                        <ul>
-
-                        </ul>
-                    </div>
-
-
-
-                </div>
-            </div>
             <!--EXPAND PLAYER PAGE-->
             <div data-page="expandPlayer" class="page">
                 <!-- Scrollable page content-->
@@ -291,6 +276,22 @@
 
                 </div>
             </div>
+
+            <!--FEED PAGE-->
+                <div data-page="feed" class="page">
+                    <!-- Scrollable page content-->
+                    <div class="page-content">
+                        <div class="content-block-title">Feed</div>
+                        <div id="feedContent" class="list-block">
+                            <ul id="feedLi">
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                </div>
             <!--SPLASHSCREEN PAGE-->
             <div id="splashscreen" class="page no-navbar no-toolbar" data-page="splashscreen">
                 <!-- page-content has additional login-screen content -->
@@ -315,53 +316,7 @@
 </div>
 
 <!--  TEMPLATES  --->
-<!-- Feed Template-->
-<script id="feedTemplate" type="text/template7">
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Results</div>
-            <div class="right">
-                <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="page" data-page="list">
-        <div class="page-content">
 
-            <div id="feedBlock" class="list-block media-list">
-                <ul>
-                    {{#each this}}
-                    <li class="swipeout">
-                        <div class="swipeout-content">
-                            <a href='#' data-template='feedListTemplate' data-context='{{stringify this}}'
-                               class="item-content item-link">
-                                <div class="item-media">
-                                    <img data-src="" class="lazy">
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">asdf{{nameMusics}}</div>
-                                    </div>
-                                    <div class="item-subtitle">{{nameMusics}}</div>
-                                    <div class="item-text">{{nameMusics}}</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swipeout-actions-right">
-                            <a href="#" class="bg-orange favorite" data-item="{{@index}}"><i class="icon fa fa-star fa-2x"></i></a>
-                            <a href="#" class="bg-blue share" data-item="{{@index}}"><i class="icon fa fa-share fa-2x"></i></a>
-                        </div>
-                        <div class="swipeout-actions-left">
-                            <a href="#" class="bg-green preview" data-item="{{@index}}"><i class="icon fa fa-play fa-2x"></i></a>
-                        </div>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-    </div>
-</script>
 <!-- Media List Template  -->
 <script id="listTemplate" type="text/template7">
     <div class="navbar">

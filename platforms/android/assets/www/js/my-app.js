@@ -42,6 +42,7 @@ $$(document).on('input change', 'input[type="range"]', function (e) {
 
 // Handle the Cordova deviceready Event
 $$(document).on('deviceready', function() {
+    initMap();
 });
 
 // Handle Submit Button
@@ -205,7 +206,29 @@ $$(document).on('click', '#mapMenu', function(e){
 
 });
 $$(document).on('click', '#feedMenu', function(e){
+    $("#feedLi").empty();
+    $.getJSON("http://localhost/waveua/www/db/feed.php?idUser="+mediaStorage.getItem("idUser"),function(result){
+        $.each(result, function(i, field){
+            $("#feedLi").append("<li class='swipeout'>"+
+                "<div class='swipeout-content'>"+
+                "<div class='item-media'>"+
+                "<img src='"+field.foto+"' class='lazy'>"+
+                "</div>"+
+                "<div class='item-inner'>"+
+                "<div class='item-title-row'>"+
+                "<div class='item-title'>"+field.nameMusics+"</div>"+
+                "</div>"+
+                "<div class='item-subtitle'>"+field.artist+"</div>"+
+                "<div class='item-text'>"+field.nameUser+"</div>"+
+                "<div class='item-text'>"+field.dateUsers+"</div>"+
+                "</div>"+
+                "</div>"+
+                "</li>");
+        });
+    });
     mainView.router.load({pageName: 'feed'});
+
+
 });
 $$(document).on('click', '#indexMenu', function(e){
     mainView.router.load({pageName: 'index'});
@@ -269,68 +292,58 @@ $$('.ac-1').on('click', function () {
 //ON PAGE LOADINGS:
 
 // DATABASE
-myApp.onPageInit ('settings', function (page) {
-
-});
 // MEDIA PLAYLISTS
 myApp.onPageInit ('media', function (page) {
     $(document).ready(function() {
         $.getJSON("http://localhost/waveua/www/db/json.php",function(result){
             $.each(result, function(i, field){
-                $("#playlist").append("<option value= ''>"+field.name+"</option>");
+                $("#playlist").append("<option value= ''>"+field.nameMusics+"</option>");
             });
         });
     });
 });
 
 // MAP AND GEOLOCATION
-    initMap();
-    function initMap() {
-        var onSuccess = function(position) {
-            var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            var options = {
-                zoom: 15,
-                center: coords,
-                mapTypeControl: false,
-                navigationControlOptions: {
-                    style: google.maps.NavigationControlStyle.SMALL
-                }
-
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: coords,
-                map: map,
-                title: "You are here!"
-            });
-        };
-        var onError = function(error){var options = {
+function initMap() {
+    var onSuccess = function(position) {
+        var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var options = {
             zoom: 15,
-            center: {lat: -34.397, lng: 150.644},
+            center: coords,
             mapTypeControl: false,
             navigationControlOptions: {
                 style: google.maps.NavigationControlStyle.SMALL
             }
 
         };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var marker = new google.maps.Marker({
-                position: {lat: -34.397, lng: 150.644},
-                map: map,
-                title: "You are here!"
-            });
-            window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
-        };
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
-            $$(document).on('deviceready', function() {
-                navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
-            });        }
-        else {
-            navigator.geolocation.getCurrentPosition(onSuccess,onError, {timeout: 10000, enableHighAccuracy: true});
+        var map = new google.maps.Map(document.getElementById('map-canvas'), options);
+        var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+            title: "You are here!"
+        });
+    };
+    var onError = function(error){var options = {
+        zoom: 15,
+        center: {lat: -34.397, lng: 150.644},
+        mapTypeControl: false,
+        navigationControlOptions: {
+            style: google.maps.NavigationControlStyle.SMALL
         }
 
+    };
+        var map = new google.maps.Map(document.getElementById('map-canvas'), options);
+        var marker = new google.maps.Marker({
+            position: {lat: -34.397, lng: 150.644},
+            map: map,
+            title: "You are here!"
+        });
+        window.alert('Code:'+error.code+'\n'+'message:'+error.message+'\n');
+    };
+    navigator.geolocation.getCurrentPosition(onSuccess,onError, {enableHighAccuracy: true,timeout: 10000,maximumAge:  18000000});
 
-    }
+
+}
 //OPEN WINDOWS IN POPUP (GOOD FOR DATABASE STUFF)
 function popupform(myform, windowname)
 {

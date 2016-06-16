@@ -16,6 +16,15 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="GoogleMaps">
+        <param name="android-package" value="plugin.google.maps.GoogleMaps" />
+    </feature>
+    <feature name="External">
+        <param name="android-package" value="plugin.google.maps.External" />
+    </feature>
+    <feature name="Geocoder">
+        <param name="android-package" value="plugin.google.maps.MyGeocoder" />
+    </feature>
     <allow-intent href="market:*" />
     <splash density="land-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
     <splash density="land-xxhdpi" src="www/res/screen/android/screen-xxhdpi-portrait.png" />

@@ -26,30 +26,19 @@ angular
                     $("#profileSide").attr("src",data.images[0].url);
                     $("#profileName").append(data.display_name);
                     mediaStorage.setItem("idUser",data.id);
-                    $$.ajax({
-                        dataType: "json",
-                        url:"db/feed.php?id="+mediaStorage.getItem("idUser"),
-                        success: function (resp) {
-                            mainView.router.load({
-                                template: Template7.templates.feedTemplate,
-                                context: resp
-                            });
-                        },
-                        error: function (xhr) {
-                            console.log("Error on ajax call " + xhr);
-                        }
-                    });
                     $.ajax({
                         type:"POST",
                         url: "db/insertLogin.php",
-                        data: "idUser=" + data.id + "&nameUser=" + data.display_name,
+                        data: "idUser=" + data.id + "&nameUser=" + data.display_name + "&imgUser=" + data.images[0].url,
                         success: function(){
                             //do stuff after the AJAX calls successfully completes
                         }
-                    })
+                    });
+                    mediaStorage.setItem("idUser",data.id);
+
                 });
                 console.log (localStorage.getItem("spotify-token"));
-
+                initMap();
                 mainView.router.load({pageName: 'map'});
 
             }, function () {

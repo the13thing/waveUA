@@ -16,6 +16,8 @@ if ($result -> num_rows){
     $q1=mysqli_query($link,$query1);
     $query4="INSERT INTO posts (`idPOSTS`,`linkPosts`,`datePosts`,`decaWeb`,`USERS_idUSERS`,`LOCATIONS_idLOCATIONS`,`MUSICS_idmusics`) VALUES ('','','$date','0','$idUser','1','$row[0]')";
     $q4=mysqli_query($link,$query4);
+    echo $query4;
+
 }
 else {
     $query2="INSERT INTO musics (`idmusics`,`ref`,`nameMusics`,`artist`,`album`,`linkMusics`,`dateMusics`) VALUES ('','$id','$name','$artist','$album','$url','$date')";
@@ -26,6 +28,7 @@ else {
     $q3=mysqli_query($link,$query3);
     $query4="INSERT INTO posts (`idPOSTS`,`linkPosts`,`datePosts`,`decaWeb`,`USERS_idUSERS`,`LOCATIONS_idLOCATIONS`,`MUSICS_idmusics`) VALUES ('','','$date','0','$idUser','1','$row1[0]')";
     $q4=mysqli_query($link,$query4);
+    echo $query4;
 }
 
 ?>

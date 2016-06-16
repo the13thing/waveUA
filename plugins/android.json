@@ -21,6 +21,10 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "plugin.google.maps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyB99s1Iqe0MwJfCLMQ8ufVdQLmz8jPDfQk",
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {

@@ -2,7 +2,121 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86b9fdae-dca5-4b05-b695-f0dc89326e9c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncKmlParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncLicenseInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncLoadImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncLoadImageInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/External.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/GoogleMaps.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyGeocoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyPlugin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyPluginInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyPluginLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginAsyncInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginCircle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginGroundOverlay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginKmlOverlay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginMarker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginPolygon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginPolyline.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginTileOverlay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginTileProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/plugin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncKmlParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncLicenseInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncLoadImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncLoadImageInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/External.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/GoogleMaps.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyGeocoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyPlugin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyPluginInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyPluginLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginAsyncInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginCircle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginGroundOverlay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginKmlOverlay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginMarker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginPolygon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginPolyline.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginTileOverlay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginTileProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Circle.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Circle.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/External.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/External.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Geocoder.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Geocoder.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMaps.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMaps.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMapsViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMapsViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GroundOverlay.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GroundOverlay.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/KmlOverlay.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/KmlOverlay.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Map.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Map.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Marker.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Marker.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPlgunProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayer.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayer.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayerDebugView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayerDebugView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginScrollView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginScrollView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyReachability.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyReachability.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.podspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/PluginUtil.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/PluginUtil.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polygon.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polygon.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polyline.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polyline.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TBXML.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TBXML.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TileOverlay.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TileOverlay.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/android.json" afterPath="$PROJECT_DIR$/platforms/android/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/callback.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/callback.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/db.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/feed.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/feed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/insertLogin.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/insertLogin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/insertPlaylist.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/insertPlaylist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/angular-spotify.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/angular-spotify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/my-app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/my-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/spotifyAuth.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/spotifyAuth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build.gradle" afterPath="$PROJECT_DIR$/platforms/android/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/project.properties" afterPath="$PROJECT_DIR$/platforms/android/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/android.json" afterPath="$PROJECT_DIR$/plugins/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/fetch.json" afterPath="$PROJECT_DIR$/plugins/fetch.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/db.php" afterPath="$PROJECT_DIR$/www/db/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/feed.php" afterPath="$PROJECT_DIR$/www/db/feed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/insertLogin.php" afterPath="$PROJECT_DIR$/www/db/insertLogin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/insertPlaylist.php" afterPath="$PROJECT_DIR$/www/db/insertPlaylist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/my-app.js" afterPath="$PROJECT_DIR$/www/js/my-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/spotifyAuth.js" afterPath="$PROJECT_DIR$/www/js/spotifyAuth.js" />
     </list>
     <ignored path="WaveUA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +138,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.379311">
-              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.11221122">
+              <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -37,8 +151,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3272727">
-              <caret line="291" column="22" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -46,6 +160,9 @@
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -55,7 +172,7 @@
       <file leaf-file-name="callback.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/callback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
@@ -65,7 +182,7 @@
       <file leaf-file-name="angular-spotify.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.910714">
+            <state vertical-scroll-proportion="0.0">
               <caret line="540" column="0" selection-start-line="540" selection-start-column="0" selection-end-line="540" selection-end-column="0" />
               <folding />
             </state>
@@ -75,11 +192,11 @@
       <file leaf-file-name="insertLogin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/db/insertLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="123" selection-start-line="10" selection-start-column="110" selection-end-line="10" selection-end-column="123" />
               <folding>
-                <marker date="1465226525965" expanded="true" signature="167:219" placeholder="SELECT * FRO... users" />
-                <marker date="1465226525965" expanded="true" signature="231:346" placeholder="INSERT INTO users... " />
+                <marker date="1465425902758" expanded="true" signature="216:268" placeholder="SELECT * FRO... users" />
+                <marker date="1465425902758" expanded="true" signature="280:408" placeholder="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -88,15 +205,15 @@
       <file leaf-file-name="insertPlaylist.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/db/insertPlaylist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.072727">
-              <caret line="20" column="55" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <marker date="1465213168721" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
-                <marker date="1465213168721" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
-                <marker date="1465213168721" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
-                <marker date="1465213168721" expanded="true" signature="824:977" placeholder="INSERT INTO musics... " />
-                <marker date="1465213168721" expanded="true" signature="1127:1221" placeholder="INSERT INTO musics_has_users... " />
-                <marker date="1465213168721" expanded="true" signature="1274:1447" placeholder="INSERT INTO posts... " />
+                <marker date="1465424354999" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
+                <marker date="1465424354999" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
+                <marker date="1465424354999" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
+                <marker date="1465424354999" expanded="true" signature="843:996" placeholder="INSERT INTO musics... " />
+                <marker date="1465424354999" expanded="true" signature="1146:1240" placeholder="INSERT INTO musics_has_users... " />
+                <marker date="1465424354999" expanded="true" signature="1293:1466" placeholder="INSERT INTO posts... " />
               </folding>
             </state>
           </provider>
@@ -105,21 +222,31 @@
       <file leaf-file-name="feed.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/db/feed.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding>
-                <marker date="1465247541333" expanded="true" signature="60:298" placeholder="SELECT * FRO... posts" />
-                <marker date="1465247541333" expanded="true" signature="60:306" placeholder="SELECT * FRO... posts" />
+                <marker date="1465422490480" expanded="true" signature="64:302" placeholder="SELECT * FRO... posts" />
+                <marker date="1465422490480" expanded="true" signature="64:310" placeholder="SELECT * FRO... posts" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my-app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3032929">
-              <caret line="293" column="3" selection-start-line="293" selection-start-column="3" selection-end-line="293" selection-end-column="3" />
+            <state vertical-scroll-proportion="-2.9310346">
+              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="3" column="66" selection-start-line="1" selection-start-column="110" selection-end-line="1" selection-end-column="133" />
               <folding />
             </state>
           </provider>
@@ -128,8 +255,8 @@
       <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/db/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.653847">
-              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -169,15 +296,16 @@
         <option value="$PROJECT_DIR$/../buildWave/index.html" />
         <option value="$PROJECT_DIR$/www/db/json.php" />
         <option value="$PROJECT_DIR$/www/db/feedList.php" />
-        <option value="$PROJECT_DIR$/www/db/insertPlaylist.php" />
-        <option value="$PROJECT_DIR$/www/db/insertLogin.php" />
         <option value="$PROJECT_DIR$/www/callback.html" />
+        <option value="$PROJECT_DIR$/www/js/angular-spotify.js" />
         <option value="$PROJECT_DIR$/www/db/feed.php" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/spotifyAuth.js" />
         <option value="$PROJECT_DIR$/www/db/db.php" />
-        <option value="$PROJECT_DIR$/www/js/angular-spotify.js" />
+        <option value="$PROJECT_DIR$/www/db/insertPlaylist.php" />
+        <option value="$PROJECT_DIR$/www/db/insertLogin.php" />
+        <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/www/js/my-app.js" />
+        <option value="$PROJECT_DIR$/www/js/spotifyAuth.js" />
       </list>
     </option>
   </component>
@@ -222,6 +350,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,17 +397,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="Z:/" />
+    <property name="last_opened_file_path" value="Z:/wave.web.ua.pt" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -342,7 +470,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -353,6 +480,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -375,6 +503,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/db/insertPlaylist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1465424354999" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
+            <marker date="1465424354999" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
+            <marker date="1465424354999" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
+            <marker date="1465424354999" expanded="true" signature="843:996" placeholder="INSERT INTO musics... " />
+            <marker date="1465424354999" expanded="true" signature="1146:1240" placeholder="INSERT INTO musics_has_users... " />
+            <marker date="1465424354999" expanded="true" signature="1293:1466" placeholder="INSERT INTO posts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/db/feed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465422490480" expanded="true" signature="64:302" placeholder="SELECT * FRO... posts" />
+            <marker date="1465422490480" expanded="true" signature="64:310" placeholder="SELECT * FRO... posts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="214" column="22" selection-start-line="214" selection-start-column="22" selection-end-line="214" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/db/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/callback.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -402,6 +572,9 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -412,12 +585,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1465213168721" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
-            <marker date="1465213168721" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465213168721" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
-            <marker date="1465213168721" expanded="true" signature="824:977" placeholder="INSERT INTO musics... " />
-            <marker date="1465213168721" expanded="true" signature="1127:1221" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465213168721" expanded="true" signature="1274:1447" placeholder="INSERT INTO posts... " />
+            <marker date="1465424354999" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
+            <marker date="1465424354999" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
+            <marker date="1465424354999" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
+            <marker date="1465424354999" expanded="true" signature="843:996" placeholder="INSERT INTO musics... " />
+            <marker date="1465424354999" expanded="true" signature="1146:1240" placeholder="INSERT INTO musics_has_users... " />
+            <marker date="1465424354999" expanded="true" signature="1293:1466" placeholder="INSERT INTO posts... " />
           </folding>
         </state>
       </provider>
@@ -450,9 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1465048663181" expanded="true" signature="32:52" placeholder="SELECT * FRO... musics" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -491,6 +661,9 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -516,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1465048663181" expanded="true" signature="32:52" placeholder="SELECT * FRO... musics" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,16 +727,11 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../buildWave/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="701" column="40" selection-start-line="701" selection-start-column="40" selection-end-line="701" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,9 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1465048663181" expanded="true" signature="32:52" placeholder="SELECT * FRO... musics" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,16 +793,11 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../buildWave/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="701" column="40" selection-start-line="701" selection-start-column="40" selection-end-line="701" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,9 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1465048663181" expanded="true" signature="32:52" placeholder="SELECT * FRO... musics" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,14 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../buildWave/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.884615">
-          <caret line="701" column="40" selection-start-line="701" selection-start-column="40" selection-end-line="701" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,13 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <marker date="1465156625081" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
-            <marker date="1465156625081" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465156625081" expanded="true" signature="599:734" placeholder="INSERT INTO musics... " />
-            <marker date="1465156625081" expanded="true" signature="884:978" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465156625081" expanded="true" signature="1031:1194" placeholder="INSERT INTO posts... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,9 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="22" selection-start-line="3" selection-start-column="35" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <marker date="1465048663181" expanded="true" signature="32:52" placeholder="SELECT * FRO... musics" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,7 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,59 +879,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/callback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/db/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/db/insertLogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="123" selection-start-line="10" selection-start-column="110" selection-end-line="10" selection-end-column="123" />
           <folding>
-            <marker date="1465226525965" expanded="true" signature="167:219" placeholder="SELECT * FRO... users" />
-            <marker date="1465226525965" expanded="true" signature="231:346" placeholder="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/db/insertPlaylist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.072727">
-          <caret line="20" column="55" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="55" />
-          <folding>
-            <marker date="1465213168721" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
-            <marker date="1465213168721" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465213168721" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
-            <marker date="1465213168721" expanded="true" signature="824:977" placeholder="INSERT INTO musics... " />
-            <marker date="1465213168721" expanded="true" signature="1127:1221" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465213168721" expanded="true" signature="1274:1447" placeholder="INSERT INTO posts... " />
+            <marker date="1465425902758" expanded="true" signature="216:268" placeholder="SELECT * FRO... users" />
+            <marker date="1465425902758" expanded="true" signature="280:408" placeholder="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/db/feed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding>
-            <marker date="1465247541333" expanded="true" signature="60:298" placeholder="SELECT * FRO... posts" />
-            <marker date="1465247541333" expanded="true" signature="60:306" placeholder="SELECT * FRO... posts" />
+            <marker date="1465422490480" expanded="true" signature="64:302" placeholder="SELECT * FRO... posts" />
+            <marker date="1465422490480" expanded="true" signature="64:310" placeholder="SELECT * FRO... posts" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/callback.html">
+    <entry file="file://$PROJECT_DIR$/www/db/insertPlaylist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1465424354999" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
+            <marker date="1465424354999" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
+            <marker date="1465424354999" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
+            <marker date="1465424354999" expanded="true" signature="843:996" placeholder="INSERT INTO musics... " />
+            <marker date="1465424354999" expanded="true" signature="1146:1240" placeholder="INSERT INTO musics_has_users... " />
+            <marker date="1465424354999" expanded="true" signature="1293:1466" placeholder="INSERT INTO posts... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3272727">
-          <caret line="291" column="22" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -804,39 +946,42 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
+    <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.379311">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/db/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.653847">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.910714">
-          <caret line="540" column="0" selection-start-line="540" selection-start-column="0" selection-end-line="540" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="66" selection-start-line="1" selection-start-column="110" selection-end-line="1" selection-end-column="133" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3032929">
-          <caret line="293" column="3" selection-start-line="293" selection-start-column="3" selection-end-line="293" selection-end-column="3" />
+        <state vertical-scroll-proportion="-2.9310346">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="540" column="0" selection-start-line="540" selection-start-column="0" selection-end-line="540" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11221122">
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
           <folding />
         </state>
       </provider>

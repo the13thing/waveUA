@@ -538,7 +538,7 @@
               localStorage.setItem('spotify-token', token);
               that.setAuthToken(token);
               deferred.resolve(token);
-
+              this.close();
             });
             $window.addEventListener('storage', storageChanged, false);
 
