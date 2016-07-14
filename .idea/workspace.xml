@@ -2,121 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86b9fdae-dca5-4b05-b695-f0dc89326e9c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncKmlParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncLicenseInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncLoadImage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/AsyncLoadImageInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/External.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/GoogleMaps.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyGeocoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyPlugin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyPluginInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/MyPluginLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginAsyncInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginCircle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginGroundOverlay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginKmlOverlay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginMarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginPolygon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginPolyline.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginTileOverlay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginTileProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/plugin/google/maps/PluginUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/plugin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncKmlParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncLicenseInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncLoadImage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/AsyncLoadImageInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/External.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/GoogleMaps.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyGeocoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyPlugin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyPluginInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/MyPluginLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginAsyncInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginCircle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginGroundOverlay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginKmlOverlay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginMarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginPolygon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginPolyline.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginTileOverlay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginTileProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/android/plugin/google/maps/PluginUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Circle.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Circle.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/External.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/External.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Geocoder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Geocoder.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMaps.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMaps.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMapsViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GoogleMapsViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GroundOverlay.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/GroundOverlay.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/KmlOverlay.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/KmlOverlay.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Map.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Map.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Marker.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Marker.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPlgunProtocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayer.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayer.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayerDebugView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginLayerDebugView.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginScrollView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyPluginScrollView.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyReachability.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/MyReachability.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.podspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/PluginUtil.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/PluginUtil.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polygon.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polygon.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polyline.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/Polyline.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TBXML.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TBXML.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TileOverlay.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/src/ios/GoogleMaps/TileOverlay.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/android.json" afterPath="$PROJECT_DIR$/platforms/android/android.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/callback.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/callback.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/db.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/feed.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/feed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/insertLogin.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/insertLogin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/db/insertPlaylist.php" afterPath="$PROJECT_DIR$/platforms/android/assets/www/db/insertPlaylist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/angular-spotify.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/angular-spotify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/my-app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/my-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/spotifyAuth.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/spotifyAuth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build.gradle" afterPath="$PROJECT_DIR$/platforms/android/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/project.properties" afterPath="$PROJECT_DIR$/platforms/android/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/android.json" afterPath="$PROJECT_DIR$/plugins/android.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/fetch.json" afterPath="$PROJECT_DIR$/plugins/fetch.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/db.php" afterPath="$PROJECT_DIR$/www/db/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/feed.php" afterPath="$PROJECT_DIR$/www/db/feed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/insertLogin.php" afterPath="$PROJECT_DIR$/www/db/insertLogin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/db/insertPlaylist.php" afterPath="$PROJECT_DIR$/www/db/insertPlaylist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/plugin.google.maps/plugin.xml" afterPath="$PROJECT_DIR$/plugins/plugin.google.maps/plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/my-app.js" afterPath="$PROJECT_DIR$/www/js/my-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/spotifyAuth.js" afterPath="$PROJECT_DIR$/www/js/spotifyAuth.js" />
     </list>
     <ignored path="WaveUA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spotifyAuth.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11221122">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
               <folding />
             </state>
@@ -151,7 +39,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -172,7 +60,7 @@
       <file leaf-file-name="callback.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/callback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-10.461538">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
@@ -235,28 +123,18 @@
       <file leaf-file-name="my-app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9310346">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
+            <state vertical-scroll-proportion="0.08793104">
               <caret line="3" column="66" selection-start-line="1" selection-start-column="110" selection-end-line="1" selection-end-column="133" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/db/db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -304,8 +182,9 @@
         <option value="$PROJECT_DIR$/www/db/insertPlaylist.php" />
         <option value="$PROJECT_DIR$/www/db/insertLogin.php" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/www/js/my-app.js" />
         <option value="$PROJECT_DIR$/www/js/spotifyAuth.js" />
+        <option value="$PROJECT_DIR$/www/js/my-app.js" />
+        <option value="$PROJECT_DIR$/plugins/plugin.google.maps/plugin.xml" />
       </list>
     </option>
   </component>
@@ -321,7 +200,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -349,8 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,44 +246,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WaveUA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WaveUA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WaveUA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WaveUA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="Z:/wave.web.ua.pt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../buildWave" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -463,10 +310,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24524158" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24669604" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -503,21 +350,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/db/insertPlaylist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1465424354999" expanded="true" signature="83:132" placeholder="SELECT * FRO... musics" />
-            <marker date="1465424354999" expanded="true" signature="444:537" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465424354999" expanded="true" signature="590:762" placeholder="INSERT INTO posts... " />
-            <marker date="1465424354999" expanded="true" signature="843:996" placeholder="INSERT INTO musics... " />
-            <marker date="1465424354999" expanded="true" signature="1146:1240" placeholder="INSERT INTO musics_has_users... " />
-            <marker date="1465424354999" expanded="true" signature="1293:1466" placeholder="INSERT INTO posts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/db/feed.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -882,14 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/callback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/db/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -935,9 +759,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/callback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
           <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -954,22 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="66" selection-start-line="1" selection-start-column="110" selection-end-line="1" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9310346">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/angular-spotify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -978,10 +802,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/spotifyAuth.js">
+    <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11221122">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/plugin.google.maps/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37931034">
+          <caret line="73" column="68" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08793104">
+          <caret line="3" column="66" selection-start-line="1" selection-start-column="110" selection-end-line="1" selection-end-column="133" />
           <folding />
         </state>
       </provider>

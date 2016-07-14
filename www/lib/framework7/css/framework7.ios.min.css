@@ -25,7 +25,6 @@ body {
     padding: 0;
     color: #000;
     font-size: 14px;
-    line-height: 1.4;
     width: 100%;
     -webkit-text-size-adjust: 100%;
     background: #fff;
@@ -55,7 +54,9 @@ a, input, select, textarea {
 
 a {
     text-decoration: none;
-    color: #777
+    color: #777;
+    float: left;
+
 }
 
 p {
@@ -1538,7 +1539,7 @@ html.pixel-ratio-3 .toolbar:before {
 }
 
 .navbar-fixed .page-content, .navbar-through .page-content {
-    padding-top: 44px
+  
 }
 
 .navbar-fixed .page-content.with-subnavbar, .navbar-fixed .subnavbar ~ .page-content, .navbar-fixed .with-subnavbar .page-content, .navbar-through .page-content.with-subnavbar, .navbar-through .subnavbar ~ .page-content, .navbar-through .with-subnavbar .page-content {
@@ -1795,21 +1796,22 @@ html.pixel-ratio-3 .searchbar:after {
 .page > .searchbar {
     position: absolute;
     width: 100%;
+    height: 70px;
     left: 0;
     top: 0;
     z-index: 200
 }
 
 .page > .searchbar ~ .page-content {
-    padding-top: 44px
+    padding-top: 40px
 }
 
 .navbar-fixed .page > .searchbar, .navbar-fixed > .searchbar, .navbar-through .page > .searchbar, .navbar-through > .searchbar {
-    top: 44px
+    top: 40px
 }
 
 .navbar-fixed .page > .searchbar ~ .page-content, .navbar-fixed > .searchbar ~ .page-content, .navbar-through .page > .searchbar ~ .page-content, .navbar-through > .searchbar ~ .page-content {
-    padding-top: 88px
+    padding-top: 80px
 }
 
 .messagebar {
@@ -2173,7 +2175,7 @@ html.pixel-ratio-3 .content-block-inner:after {
 
 .list-block ul {
     background: #fff;
-    list-style: none;
+
     padding: 0;
     margin: 0;
     position: relative
@@ -2558,7 +2560,8 @@ html.pixel-ratio-3 .list-block .item-link.list-button:after {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
-    align-items: center
+    align-items: center;
+
 }
 
 .list-block .list-block-label {
@@ -2667,6 +2670,7 @@ html.pixel-ratio-3 .list-block .item-link.list-button:after {
     overflow: hidden;
     white-space: nowrap;
     max-width: 100%;
+    text-align: left;
     text-overflow: ellipsis
 }
 
@@ -2680,7 +2684,8 @@ html.pixel-ratio-3 .list-block .item-link.list-button:after {
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    display: -webkit-box
+    display: -webkit-box;
+    text-align: left;
 }
 
 .list-block li.media-item .item-title, .list-block.media-list .item-title {
@@ -2719,7 +2724,7 @@ html.ios-gt-8 .list-block li.media-item .item-title, html.ios-gt-8 .list-block.m
 
 .list-block li.media-item .item-media img, .list-block.media-list .item-media img {
     display: block
-}
+;}
 
 .list-block li.media-item .item-title-row, .list-block.media-list .item-title-row {
     display: -webkit-box;
@@ -2978,6 +2983,7 @@ html.ios-gt-8 .contacts-block .list-group-title {
 
 .list-block .item-title.label {
     width: 35%;
+    text-align: left;
     -webkit-flex-shrink: 0;
     -ms-flex: 0 0 auto;
     flex-shrink: 0
@@ -6528,4 +6534,76 @@ html.ios-gt-8 .notifications .item-title {
 
 .disabled .disabled, .disabled [disabled], [disabled] .disabled, [disabled] [disabled] {
     opacity: 1
+}
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+
+@color-bg: 				#40424c;
+@color-primary: 		#FFF;
+@color-secondary: 	#999;
+@color-tertiary: 		#000;
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: @color-bg;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+p.track {
+    text-transform: uppercase;
+    color: @color-primary;
+span {
+    color: @color-secondary;
+}
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    border: white;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.2s ease 0;4;
+    font-size: 30px;
+
+&[data-am-button^="large"] {
+         width: 100px;
+     height: 100px;
+     margin-top: 10px
+i {
+    font-size: 30px;
+}
+}
+&[data-am-button^="small"] {
+     width: 40px;
+     height: 40px;
+i {
+    font-size: 14px;
+}
+}
+&:hover {
+     color: @color-secondary;
+     border-color: @color-secondary;
+ }
+&:focus {
+     outline: none;
+ }
+}
 }

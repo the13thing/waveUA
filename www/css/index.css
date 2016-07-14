@@ -105,3 +105,24 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+p.track {
+    text-transform: uppercase;
+    color: #FFF;}
+
+span {
+    color: #999;
+}
+
+
+
+

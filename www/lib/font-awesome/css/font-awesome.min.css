@@ -235,7 +235,8 @@
 }
 
 .fa-user:before {
-    content: "\f007"
+    content: "\f007";
+    color: #D0D1D2;
 }
 
 .fa-film:before {
@@ -264,6 +265,7 @@
 
 .fa-search-plus:before {
     content: "\f00e"
+
 }
 
 .fa-search-minus:before {
@@ -279,7 +281,9 @@
 }
 
 .fa-gear:before, .fa-cog:before {
-    content: "\f013"
+    content: "\f013";
+    color: #D0D1D2;
+
 }
 
 .fa-trash-o:before {
@@ -491,7 +495,8 @@
 }
 
 .fa-play:before {
-    content: "\f04b"
+    content: "\f04b";
+    
 }
 
 .fa-pause:before {
@@ -547,7 +552,8 @@
 }
 
 .fa-info-circle:before {
-    content: "\f05a"
+    content: "\f05a";
+    color: #D0D1D2;
 }
 
 .fa-crosshairs:before {
@@ -596,6 +602,11 @@
 
 .fa-plus:before {
     content: "\f067"
+    color: #D0D1D2;
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 10px;
 }
 
 .fa-minus:before {
@@ -803,7 +814,8 @@
 }
 
 .fa-feed:before, .fa-rss:before {
-    content: "\f09e"
+    content: "\f09e";
+    color: #D0D1D2;
 }
 
 .fa-hdd-o:before {
@@ -1993,7 +2005,8 @@
 }
 
 .fa-newspaper-o:before {
-    content: "\f1ea"
+    content: "\f1ea";
+    color: #D0D1D2;
 }
 
 .fa-wifi:before {
@@ -2521,7 +2534,8 @@
 }
 
 .fa-map:before {
-    content: "\f279"
+    content: "\f279";
+    color: #D0D1D2;
 }
 
 .fa-commenting:before {

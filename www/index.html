@@ -31,16 +31,10 @@
 
 <!-- Left panel menu with reveal effect (could also use a panel-cover effect)-->
 <div class="panel panel-left panel-reveal" style ="overflow: hidden">
-        <img src="img/sideMenu.png">
-        <img id="profileSide" style ="position: relative;
-             left: 30%;
-             top: -120px;
-             width: 120px;
-             height: 120px;
-             border-radius: 100px;
-             " class="lazy" data-src=""/>
-    <h2 id="profileName" style="position: relative; top:-100px; left: 20%"></h2>
-    <div class="list-block" style="position:relative; top:-50px">
+    <img src="img/sideMenu.png">
+    <img id="profileSide" class="lazy" data-src=""/>
+    <h2 id="profileName" style="position: relative; top:-100px; left: 0%"></h2>
+    <div class="list-block" style="position:relative; top:-100px">
         <ul>
             <li id="feed">
                 <div class="item-content">
@@ -71,22 +65,6 @@
                     <div class="item-media"><i class="fa fa-map"></i></div>
                     <div class="item-inner">
                         <div class="item-title label"><a id="mapMenu" href="#">Map</a></div>
-                    </div>
-                </div>
-            </li>
-            <li id="settings">
-                <div class="item-content">
-                    <div class="item-media"> <i class="icon fa fa-cog"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title label"><a id="settingsMenu" href="#">Settings</a></div>
-                    </div>
-                </div>
-            </li>
-            <li id="about">
-                <div class="item-content">
-                    <div class="item-media"><i class="icon fa fa-info-circle"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title label">About</div>
                     </div>
                 </div>
             </li>
@@ -123,14 +101,13 @@
 
         <!-- Bottom Toolbar on every view unless no-toolbar class specified (see item template)-->
         <div class="toolbar toolbar-hidden">
-            <div class="toolbar-inner" style="height: 50px; background-image: url('img/player_back.png')";>
-                <div id="previewAudio" class="content-block">
-                    <img id="imgPreview" src="" style="width: 10%">
-                    <audio id="player" controls preload="" src=""></audio>
-                    <a href="#" class="ac-1"><i class="fa fa-sort-up"></i></a>
-
-                        <i id="expandPlayer" class="fa fa-arrows-alt"></i>
-                </div>
+            <div class="toolbar-inner" style="height: 50px; background-image: url('img/player_back.png')">
+                <button id="btn-expand"><i id="expandIcon" class="fa fa-arrows-alt"></i></button>
+                <audio id="player" controls preload="" src="" style="display: none"></audio>
+                <button id="btn-play-pause"><i class="fa fa-play"></i></button>
+                <button  id="btn-stop"><i class="fa fa-stop"></i></button>
+                <button  id="btn-mute"><i class="fa fa-volume-up"></i></button>
+                <button  class="ac-1"><i class="fa fa-ellipsis-v"></i></button>
                 <div id="spotifyExternal">
                     <a href="" id="spotifyLink" class="link external">
                         <i class="icon icon-spotify"></i>
@@ -158,11 +135,11 @@
                                     <div class="item-inner">
                                         <div class="item-title label">
 
-                                                    <select name="searchTerms" id="searchTerms" >
-                                                        <option value="track" selected>Songs</option>
-                                                        <option value="artist">Artist</option>
-                                                        <option value="album">Album</option>
-                                                    </select>
+                                            <select name="searchTerms" id="searchTerms" >
+                                                <option value="track" selected>Songs</option>
+                                                <option value="artist">Artist</option>
+                                                <option value="album">Album</option>
+                                            </select>
 
                                         </div>
                                         <div class="item-input">
@@ -175,7 +152,7 @@
                                 <div class="item-content">
                                     <div class="item-media"><i class="icon fa fa-list-ul" style="font-size: 20px"></i></div>
                                     <div class="item-inner">
-                                        <div class="item-title label" style="color:#777">Max Results</div>
+                                        <div class="item-title label" id="searchTerms" style="font-size:17px">Max Results</div>
                                         <div class="item-input">
                                             <div class="range-slider">
                                                 <input id="numResults" type="range" min="0" max="50" value="20" step="1"/>
@@ -219,79 +196,102 @@
             <div data-page="profile" class="page">
                 <!-- Scrollable page content-->
                 <div class="page-content">
-                    <div class="content-block-title">Profile</div>
-                    <div class="list-block">
-                        <ul>
-                            <li>
-                                <div class="item-content">
-                                    <div class="item-media"><img id="profile_image" data-src="" class="lazy"/></div>
-                                    <div class="item-inner">
-                                        <div id="profile_country" class="item-title">Country: </div>
-                                    </div>
-                                </div>
-                            </li>
+                    <div class="item-content" id="profile1">
+                        <div class="item-media" id="profile2">
+                            <img id="profile_image" data-src="" class="lazy"/>
+                            <h3 id="profile_name" class="perfil"></h3>
+                        </div>
+                        <div class="cenas">
+                            <h3 id="followers" class="follow"></h3>
+                            <h3 id="following" class="follow"></h3>
+                        </div>
+                        <div class="content-block" style="margin-top:10%;">
+                            <h3>Playlists</h3>
+                            <div class="list-block accordion-list" id="playlistProfile">
+                            </div>
 
-                            <li>
-                                <div class="item-content">
-                                    <div class="item-inner">
-                                        <div id="profile_name" class="item-title label"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
-
-                </div>
-            </div>
-            <!--EXPAND PLAYER PAGE-->
-            <div data-page="expandPlayer" class="page">
-                <!-- Scrollable page content-->
-                <div class="page-content">
-                    <a href="" class="back"><i class="fa fa-arrow-left"></i></a>
-                    <div class="content-block-title">Playing now</div>
-                    <div class="list-block">
-                        <ul>
-                            <li>
-                                <div class="item-content">
-                                    <div class="item-media"><img id="trackImage" src="" class="lazy"/></div>
-                                    <div class="item-inner">
-                                        <div class="item-title">Country: </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title label"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-            <!--FEED PAGE-->
-                <div data-page="feed" class="page">
-                    <!-- Scrollable page content-->
-                    <div class="page-content">
-                        <div class="content-block-title">Feed</div>
-                        <div id="feedContent" class="list-block">
-                            <ul id="feedLi">
-
-                            </ul>
                         </div>
 
 
 
                     </div>
                 </div>
+            </div>
+            <!--PROFILE OTHERS PAGE-->
+            <div data-page="profileOther" class="page no-navbar">
+                <!-- Scrollable page content-->
+                <a href="" id="profileOBack" class="back"><i class="fa fa-arrow-left fa-3x" style="position: fixed"></i></a>
+                <div class="page-content">
+                    <div class="item-content" id="profileO1">
+                        <div class="item-media" id="profileO2">
+                            <button id="profileO_follow">Follow</button>
+                            <button id="profileO_unfollow">Unfollow</button>
+                            <img id="profileO_image" data-src="" class="lazy"/>
+                            <h3 id="profileO_name" class="perfil"></h3>
+                        </div>
+                        <div class="cenas">
+                            <h3 id="followersO" class="follow"></h3>
+                            <h3 id="followingO" class="follow"></h3>
+                        </div>
+                        <div class="content-block" style="margin-top:10%;">
+                            <h3>Playlists</h3>
+                            <div class="list-block accordion-list" id="playlistProfileO">
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!--EXPAND PLAYER PAGE-->
+            <div data-page="expandPlayer" class="page no-navbar no-toolbar">
+                <!-- Scrollable page content-->
+                <a href="" id="expandPlayerBack" class="back"><i class="fa fa-arrow-left fa-3x"></i></a>
+                <div class="content-block-title">Playing now</div>
+                <div class="page-content" id="expandContent" style="">
+                    <progress id="progress-bar" value="0" max="1" ></progress>
+                    <div style ="margin-top:40%; background-color:rgba(0, 0, 0, 0.7);">
+                        <button  id="btn-backwardExp"> <i class="fa fa-step-backward"></i> </button>
+                        <button id="btn-play-pauseExp"><i class="fa fa-play"></i></button>
+                        <button  id="btn-stopExp"><i class="fa fa-stop"></i></button>
+                        <button  id="btn-muteExp"><i class="fa fa-volume-up"></i></button>
+                        <button  id="btn-forwardExp"> <i class="fa fa-step-forward"></i> </button>
+                        <button style="position: absolute;right:5%" id="btn-ShareExp"> <i class="fa fa-share"></i> </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--FEED PAGE-->
+            <div data-page="feed" class="page">
+                <!-- Scrollable page content-->
+                <div class="page-content">
+                    <div class="content-block-title">Feed</div>
+                    <div id="feedContent" class="list-block">
+                        <ul id="feedLi">
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!--FEED COMMENTS PAGE-->
+            <div data-page="comments" class="page no-navbar">
+                <!-- Scrollable page content-->
+                <a href="" id="commentsBack" class="back"><i class="fa fa-arrow-left fa-3x"></i></a>
+                <div class="page-content">
+                    <div class="content-block-title">Comments</div>
+                    <div id="feedComments" class="list-block">
+                        <ul id="feedLiComments">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!--SPLASHSCREEN PAGE-->
             <div id="splashscreen" class="page no-navbar no-toolbar" data-page="splashscreen">
                 <!-- page-content has additional login-screen content -->
@@ -299,7 +299,7 @@
     background-image:-webkit-linear-gradient(left, #C44A4B 0%, #491549 100%);
     background-image:-ms-linear-gradient(left, #C44A4B 0%, #491549 100%);">
                     <div class="content-block" style="margin-top:45%">
-                            <div class=""><img style="display: block; margin: 0 auto" src="img/logo_white-01.png"/></div>
+                        <div class=""><img style="display: block; margin: 0 auto" src="img/logo_white-01.png"/></div>
                         <p><input type="button" class="button button-big button-fill color-white" style="text-transform: uppercase;
     font-weight: 600;
     color: #C44A4B;
@@ -322,7 +322,9 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Results</div>
+            <div class="center sliding">
+                <img style="width:90%" src="img/icon.png">
+            </div>
             <div class="right">
                 <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
             </div>
@@ -357,8 +359,8 @@
                                     <img data-src="{{album.images[2].url}}" class="lazy">
                                 </div>
                                 <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">{{name}}</div>
+                                    <div class="item-title-row" >
+                                        <div class="item-title" id="songtitle" style="margin-left: 0px">{{name}}</div>
                                     </div>
                                     <div class="item-subtitle">{{artists[0].name}}</div>
                                     <div class="item-text">{{album.name}}</div>
@@ -370,7 +372,8 @@
                             <a href="#" class="bg-blue share" data-item="{{@index}}"><i class="icon fa fa-share fa-2x"></i></a>
                         </div>
                         <div class="swipeout-actions-left">
-                            <a href="#" class="bg-green preview" data-item="{{@index}}"><i class="icon fa fa-play fa-2x"></i></a>
+                            <a href="#" class="bg-green preview" data-item="{{@index}}"><i class="icon fa fa-play fa-2x">
+                            </i></a>
                         </div>
                     </li>
                     {{/each}}
@@ -384,7 +387,9 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Results</div>
+            <div class="center sliding">
+                <img style="width:90%" src="img/icon.png">
+            </div>
             <div class="right">
                 <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
             </div>
@@ -450,7 +455,9 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Results</div>
+            <div class="center sliding">
+                <img style="width:90%" src="img/icon.png">
+            </div>
             <div class="right">
                 <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
             </div>
@@ -499,7 +506,7 @@
                                 </div>
                                 <div class="item-inner">
                                     <div class="item-title-row">
-                                        <div class="item-title">{{name}}</div>
+                                        <div class="item-title" id="songtitle">{{name}}</div>
                                     </div>
 
                                 </div>
@@ -517,7 +524,9 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Results</div>
+            <div class="center sliding">
+                <img style="width:90%" src="img/icon.png">
+            </div>
             <div class="right">
                 <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
             </div>
@@ -567,7 +576,7 @@
                                 </div>
                                 <div class="item-inner">
                                     <div class="item-title-row">
-                                        <div class="item-title">{{name}}</div>
+                                        <div class="item-title" id="songtitle">{{name}}</div>
                                     </div>
 
                                 </div>
@@ -586,7 +595,9 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Results</div>
+            <div class="center sliding">
+                <img style="width:90%" src="img/icon.png">
+            </div>
             <div class="right">
                 <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
             </div>
@@ -635,7 +646,7 @@
                                 </div>
                                 <div class="item-inner">
                                     <div class="item-title-row">
-                                        <div class="item-title">{{name}}</div>
+                                        <div class="item-title" id="songtitle">{{name}}</div>
                                     </div>
 
                                 </div>
@@ -655,7 +666,9 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-            <div class="center sliding">Media Detail</div>
+            <div class="center sliding">
+                <img style="width:90%" src="img/icon.png">
+            </div>
             <div class="right">
                 <a href="#" class="link icon-only open-panel"> <i class="fa fa-bars"></i></a>
             </div>
@@ -671,7 +684,10 @@
                         <div class="item-content">
                             <div class="item-media"><img data-src="{{album.images[2].url}}" class="lazy"/></div>
                             <div class="item-inner">
-                                <div class="item-title">{{name}}</div>
+                                <div class="item-title" id="songtitle">{{name}}</div>
+                                <a id="playerBtn" href="">
+                                    <i class="icon fa fa-play fa-2x"> </i>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -679,20 +695,19 @@
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Artist</div>
+                                <div class="item-title label" id="searchTerms">Artist</div>
                                 <div class="item-title label">{{artists[0].name}}</div>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="content-block-title">Album Info</div>
-            <div class="list-block">
+            <div class="list-block" style="top:-10px">
                 <ul>
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Album</div>
+                                <div class="item-title label"id="searchTerms">Album</div>
                                 <div class="item-title label">{{album.name}}</div>
                             </div>
                         </div>
@@ -701,7 +716,7 @@
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Popularity Rank</div>
+                                <div class="item-title label" id="searchTerms">Popularity Rank</div>
                                 <div class="item-input">
                                     <div class="range-slider">
                                         <input type="range" min="0" max="100" value="{{popularity}}" disabled/>
@@ -716,18 +731,10 @@
                 </ul>
             </div>
 
-            <a id="playerBtn" href="">
-                <i class="icon fa fa-play fa-2x"> </i>
-            </a>
-            <form name="musicAdd" onsubmit="popupform(this,'musicAdd')" action="db/insertPlaylist.php" method="post">
-                <input type="hidden" name="title" value="{{name}}">
-                <input type="hidden" name="artist" value="{{artists[0].name}}">
-                <input type="hidden" name="album" value="{{album.name}}">
-                PLAYLIST
-                <select id="playlist">
-                </select>
-                <input type="submit">
-            </form>
+
+<div style="margin: auto;width: 100%">
+                <a id="shareMediaBtn" href="#{{id}}"><h2 id="searchTerms">Share Now</h2></a>
+</div>
 
 
 
@@ -741,9 +748,6 @@
 <script src="js/angular-spotify.js"></script>
 <script src="js/spotifyAuth.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjehzyieNw2LwnTBZLjjYVzPm-1iemx7c">
-</script>
-
 
 <!-- Weinre Debugging Support - uncomment and replace ip address with yours below to debug -->
 <!-- see this guide for instructions http://docs.phonegap.com/references/developer-app/debugging/ -->

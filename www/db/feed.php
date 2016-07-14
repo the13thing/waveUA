@@ -1,7 +1,8 @@
 <?php
 include "db.php";
 $idUser = $_GET['idUser'];
-$queryMatch="SELECT * FROM `posts` INNER JOIN musics ON posts.MUSICS_idmusics=musics.idmusics  INNER JOIN locations ON posts.LOCATIONS_idLOCATIONS=locations.idLOCATIONS INNER JOIN users ON posts.USERS_idUSERS=users.idUSERS WHERE `USERS_idUSERS` LIKE '$idUser'";
+#$queryMatch="SELECT * FROM `POSTS` INNER JOIN MUSICS ON POSTS.MUSICS_idmusics=MUSICS.idmusics  INNER JOIN LOCATIONS ON POSTS.LOCATIONS_idLOCATIONS=LOCATIONS.idLOCATIONS INNER JOIN USERS ON POSTS.USERS_idUSERS=USERS.idUSERS WHERE `USERS_idUSERS` LIKE '$idUser'";
+$queryMatch="SELECT * FROM `POSTS` INNER JOIN MUSICS ON POSTS.MUSICS_idmusics=MUSICS.idmusics  INNER JOIN LOCATIONS ON POSTS.LOCATIONS_idLOCATIONS=LOCATIONS.idLOCATIONS INNER JOIN USERS ON POSTS.USERS_idUSERS=USERS.idUSERS ORDER BY `datePosts` DESC";
 $result=mysqli_query($link,$queryMatch);
 $row_cnt = $result->num_rows;
 $row=array();
